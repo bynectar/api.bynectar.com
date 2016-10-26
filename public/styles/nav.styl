@@ -1,0 +1,66 @@
+// Nav
+#header
+	position fixed
+	top 0
+	left 0
+	right 0
+	height 7.5rem
+	background transparent
+	z-index header-z
+	transition background linear .2s
+
+	#header__logo
+		img
+			position absolute
+			top 15px
+			left 10px
+			width auto
+			height 70px
+
+	#header__nav--desktop
+		font-size 1rem
+		text-align center
+		color dk-gray
+		padding-top 36px
+		top 0
+		left 0
+		right 0
+
+		ul
+			list-style none
+			margin 0
+			padding 0
+
+			h1,li
+				display inline
+				font-family font-work
+				font-weight 400
+				a
+					margin 0 .5rem
+					text-decoration none
+					text-transform none
+					transition color linear .1s
+					border none
+					color inherit
+					&:hover
+						color amber
+
+			#nav__name
+				letter-spacing .5rem
+				font-size 1.25rem
+				font-family font-playfair
+				font-style italic
+				font-weight normal
+
+			#nav__pipe
+				margin 0 1rem
+				color mid-gray
+
+body.page--imageFeature
+	#header #header__nav--desktop
+		color white
+
+html.scroll #header
+	background rgba(255,255,255,.9)
+	#header__nav--desktop
+		color dk-gray
