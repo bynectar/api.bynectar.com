@@ -12,15 +12,10 @@ var Photo = new keystone.List('Photo', {
 });
 
 Photo.add({
-	title: {
-		type: Types.Text,
-		required: true,
-		value: '',
-		initial: true
-	},
+	title: { type: String, required: true },
 	publishedDate: { type: Types.Datetime, default: Date.now },
 	image: { type: Types.CloudinaryImage },
-	caption: { type: Types.Text },
+	caption: { type: Types.Text, initial: true },
 	photographer: {
 		name: { type: Types.Text },
 		website: { type: Types.Url },

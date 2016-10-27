@@ -15,8 +15,7 @@ Gallery.add({
 	title: {
 		type: Types.Text,
 		required: true,
-		value: '',
-		initial: true
+		value: ''
 	},
 	publishedDate: { type: Types.Datetime, default: Date.now },
 	subtitle: { type: Types.Text, required: true, default: 'Subtitle' },

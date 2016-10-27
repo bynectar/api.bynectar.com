@@ -20,7 +20,7 @@
 			</div>
 			<div class="galleryThumbnail__photo">
 				<div class="thumbWrapper thumbHover" data-slide="{{data.gallery.thumbnail.image.secure_url}}">
-					<img class="thumbImage" src="{{data.gallery.thumbnail.image.secure_url}}">
+					<img class="thumbImage" src="{{cloudinaryUrl data.gallery.thumbnail.image width='900' height='900' crop='fit'}}">
 					<div class="thumbOverlay">
 						<div class="thumbText">
 							<p>{{data.gallery.thumbnail.caption}}</p>
