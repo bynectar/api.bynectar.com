@@ -19,12 +19,12 @@
 				<p class="galleryThumbnail__blurb">{{{data.gallery.blurb.body}}}</p>
 			</div>
 			<div class="galleryThumbnail__photo">
-				<div class="thumbWrapper thumbHover" data-slide="{{thumbnailPhoto.fields.photo.fields.file.url}}">
+				<div class="thumbWrapper thumbHover" data-slide="{{data.gallery.thumbnail.image.url}}">
 					<img class="thumbImage" src="{{data.gallery.thumbnail.image.url}}">
 					<div class="thumbOverlay">
 						<div class="thumbText">
 							<p>{{data.gallery.thumbnail.caption}}</p>
-							<span class="thumbByline">Photo by <a href="{{thumbnailPhoto.fields.photographer.fields.website}}" title="{{thumbnailPhoto.fields.photographer.fields.name}}" target="_blank">{{data.gallery.thumbnail.photographer.name}}</a></span>
+							<span class="thumbByline">Photo by <a href="{{data.gallery.thumbnail.photographer.website}}" title="{{data.gallery.thumbnail.photographer.name}}" target="_blank">{{data.gallery.thumbnail.photographer.name}}</a></span>
 						</div>
 					</div>
 				</div>
@@ -34,12 +34,12 @@
 		<div class="grid" id="galleryGrid">
 			{{#each data.gallery.gridImages}}
 			<div class="galleryGrid__item">
-				<div class="thumbWrapper thumbHover" data-slide="{{fields.photo.fields.file.url}}">
-					<img class="thumbImage" src="{{image.url}}" alt="{{fields.title}}">
+				<div class="thumbWrapper thumbHover" data-slide="{{image.url}}">
+					<img class="thumbImage" src="{{image.url}}" alt="{{title}}">
 					<div class="thumbOverlay">
 						<div class="thumbText">
-							<p>{{fields.caption}}</p>
-							<span class="thumbByline">Photo by <a href="{{fields.photographer.fields.website}}" title="{{fields.photographer.fields.name}}" target="_blank">{{fields.photographer.fields.name}}</a></span>
+							<p>{{caption}}</p>
+							<span class="thumbByline">Photo by <a href="{{photographer.website}}" title="{{photographer.name}}" target="_blank">{{photographer.name}}</a></span>
 						</div>
 					</div>
 				</div>
@@ -48,31 +48,28 @@
 		</div>
 
 		<div id="galleryQuote">
-			<div id="galleryQuote__photo" data-slide="{{quotePhoto.fields.file.url}}" style="background-image:url({{quotePhoto.fields.photo.fields.file.url}})">
-				<div id="galleryQuote__photoCredit">Photo by <a href="{{quotePhoto.fields.photographer.fields.website}}" title="{{quotePhoto.fields.photographer.fields.name}}" target="_blank">{{quotePhoto.fields.photographer.fields.name}}</a></div>
+			<div id="galleryQuote__photo" data-slide="{{data.gallery.quoteImage.image.url}}" style="background-image:url({{data.gallery.quoteImage.image.url}})">
+				<div id="galleryQuote__photoCredit">Photo by <a href="{{data.gallery.quoteImage.photographer.website}}" title="{{data.gallery.quoteImage.photographer.name}}" target="_blank">{{data.gallery.quoteImage.photographer.name}}</a></div>
 			</div>
 			<div id="galleryQuote__overlay">
 				<div id="galleryQuote__text">
-					<blockquote>{{quoteText}}</blockquote>
-					<p id="galleryQuote__byline">{{quoteAttribution}}</p>
+					<blockquote>{{data.gallery.quoteBody}}</blockquote>
+					<p id="galleryQuote__byline">{{data.gallery.quoteByline}}</p>
 				</div>
 			</div>
 		</div>
 
 		<div id="galleryInfo">
+			{{#if data.gallery.vendors}}
 			<div id="galleryInfo__vendors">
 				<h3>Vendors</h3>
 				<ul>
-					<li>Catering: <a href="#">Yum Yum Nom Nom</a></li>
-					<li>Photography: <a href="#">Cool Photography</a></li>
-					<li>Venue: <a href="#">The Barn at Gibbet Hill</a></li>
-					<li>Videography: <a href="#">Action!</a></li>
-					<li>Catering: <a href="#">Yum Yum Nom Nom</a></li>
-					<li>Photography: <a href="#">Cool Photography</a></li>
-					<li>Venue: <a href="#">The Barn at Gibbet Hill</a></li>
-					<li>Videography: <a href="#">Action!</a></li>
+					{{#each data.gallery.vendors}}
+					<li>{{type}}: <a href="{{website}}" title="{{name}}" target="_blank">{{name}}</a></li>
+					{{/each}}
 				</ul>
 			</div>
+			{{/if}}
 			<div id="galleryInfo__cta">
 				<h3>Get in Touch</h3>
 				<a href="#">Let's Talk.</a>

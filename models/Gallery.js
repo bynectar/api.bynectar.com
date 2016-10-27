@@ -27,6 +27,10 @@ Gallery.add({
 		body: { type: Types.Html, wysiwyg: true }
 	},
 	gridImages: { type: Types.Relationship, ref: 'Photo', many: true },
+	quoteBody: { type: Types.Text },
+	quoteByline: { type: Types.Text },
+	quoteImage: { type: Types.Relationship, ref: 'Photo' },
+	vendors: { type: Types.Relationship, ref: 'Vendor', many: true }
 });
 
 Gallery.register();

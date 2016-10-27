@@ -21,7 +21,10 @@ Photo.add({
 	publishedDate: { type: Types.Datetime, default: Date.now },
 	image: { type: Types.CloudinaryImage },
 	caption: { type: Types.Text },
-	photographer: { type: Types.Relationship, ref: 'Vendor', filters: { type: 'photographer' } }
+	photographer: {
+		name: { type: Types.Text },
+		website: { type: Types.Url },
+	}
 });
 
 Photo.register();

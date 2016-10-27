@@ -19,22 +19,10 @@ exports = module.exports = function (req, res) {
 
 		var q = keystone.list('Gallery').model.findOne({
 			key: locals.filters.gallery,
-		}).populate({path: 'thumbnail gridImages', populate: ['photographer']});
+		}).populate('thumbnail gridImages vendors quoteImage');
 
 		q.exec(function (err, result) {
 			locals.data.gallery = result;
-			next(err);
-		});
-
-	});
-
-	// Load other galleries
-	view.on('init', function (next) {
-
-		var q = keystone.list('Gallery').model.find().populate('gridImages').limit('4');
-
-		q.exec(function (err, results) {
-			locals.data.galleries = results;
 			next(err);
 		});
 
