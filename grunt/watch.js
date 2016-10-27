@@ -13,6 +13,7 @@ module.exports = {
 	livereload: {
 		files: [
 			'public/styles/**/*.css',
+			'public/js/**/*.js'
 		],
 		options: {
 			livereload: true,
