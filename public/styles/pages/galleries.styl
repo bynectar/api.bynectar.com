@@ -134,14 +134,15 @@
 	aspect(small,3,1)
 
 #galleryBody
-	margin .25rem
+	width 100%
+	padding .25rem
+	box-sizing border-box
 
 .galleryThumbnail
 	flexContainer()
 	box-sizing border-box
 	.galleryThumbnail__text
 		flex 1
-		padding .25rem
 		box-sizing border-box
 		text-align center
 		h4
@@ -155,13 +156,12 @@
 // Gallery View Styles
 #galleryGrid
 	.galleryGrid__item
-		border .25rem solid white
 		box-sizing border-box
 
 #galleryQuote
-	padding .25rem
 	position relative
 	#galleryQuote__photo
+		border .25rem solid white
 		thumbnailImage()
 		aspect(small,2,1)
 		cursor pointer
