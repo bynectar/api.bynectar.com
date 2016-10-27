@@ -19,8 +19,8 @@
 				<p class="galleryThumbnail__blurb">{{{data.gallery.blurb.body}}}</p>
 			</div>
 			<div class="galleryThumbnail__photo">
-				<div class="thumbWrapper thumbHover" data-slide="{{data.gallery.thumbnail.image.url}}">
-					<img class="thumbImage" src="{{data.gallery.thumbnail.image.url}}">
+				<div class="thumbWrapper thumbHover" data-slide="{{data.gallery.thumbnail.image.secure_url}}">
+					<img class="thumbImage" src="{{data.gallery.thumbnail.image.secure_url}}">
 					<div class="thumbOverlay">
 						<div class="thumbText">
 							<p>{{data.gallery.thumbnail.caption}}</p>
@@ -34,8 +34,8 @@
 		<div class="grid" id="galleryGrid">
 			{{#each data.gallery.gridImages}}
 			<div class="galleryGrid__item">
-				<div class="thumbWrapper thumbHover" data-slide="{{image.url}}">
-					<img class="thumbImage" src="{{image.url}}" alt="{{title}}">
+				<div class="thumbWrapper thumbHover" data-slide="{{image.secure_url}}">
+					<img class="thumbImage" src="{{image.secure_url}}" alt="{{title}}">
 					<div class="thumbOverlay">
 						<div class="thumbText">
 							<p>{{caption}}</p>
@@ -48,7 +48,7 @@
 		</div>
 
 		<div id="galleryQuote">
-			<div id="galleryQuote__photo" data-slide="{{data.gallery.quoteImage.image.url}}" style="background-image:url({{data.gallery.quoteImage.image.url}})">
+			<div id="galleryQuote__photo" data-slide="{{data.gallery.quoteImage.image.secure_url}}" style="background-image:url({{data.gallery.quoteImage.image.secure_url}})">
 				<div id="galleryQuote__photoCredit">Photo by <a href="{{data.gallery.quoteImage.photographer.website}}" title="{{data.gallery.quoteImage.photographer.name}}" target="_blank">{{data.gallery.quoteImage.photographer.name}}</a></div>
 			</div>
 			<div id="galleryQuote__overlay">
