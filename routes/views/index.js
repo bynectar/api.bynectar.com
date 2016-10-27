@@ -8,6 +8,8 @@ exports = module.exports = function (req, res) {
 	// locals.section is used to set the currently selected
 	// item in the header navigation.
 	locals.section = 'home';
+	// Set appropriate heading type to use appropriate styles
+	locals.headingType = 'image';
 
 	// Render the view
 	view.render('index');

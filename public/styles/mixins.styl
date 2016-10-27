@@ -95,6 +95,18 @@ featureViewport()
 	height 100%
 
 // Buttons
+button()
+	display inline-block
+	border lt-gray solid 1px
+	padding .5rem 1rem
+	text-decoration none
+	font-family font-playfair
+	font-size 1.25rem
+	color amber
+	transition all linear .2s
+	&:hover
+		border-color mid-gray
+
 .button-radius( tl = 4px, tr = 4px, br = 4px, bl = 4px )
 	-webkit-border-top-left-radius = tl
 	-webkit-border-top-right-radius = tr
@@ -153,9 +165,12 @@ imageHero()
 		positionFull()
 		display flex
 		align-items center
+		color white
 		.heroText
 			flex 1
 			.galleryHero__title
 				pageTitle()
+				color white
 			.galleryHero__surTitle
 				surTitle()
+				color white

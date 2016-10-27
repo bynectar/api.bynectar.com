@@ -7,6 +7,8 @@ exports = module.exports = function (req, res) {
 
 	// Set locals
 	locals.section = 'gallery';
+	// Set appropriate heading type to use appropriate styles
+	locals.headingType = 'text';
 	locals.filters = {
 		gallery: req.params.gallery,
 	};

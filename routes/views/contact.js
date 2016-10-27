@@ -8,6 +8,8 @@ exports = module.exports = function (req, res) {
 
 	// Set locals
 	locals.section = 'contact';
+	// Set appropriate heading type to use appropriate styles
+	locals.headingType = 'text';
 	locals.enquiryTypes = Enquiry.fields.enquiryType.ops;
 	locals.formData = req.body || {};
 	locals.validationErrors = {};
