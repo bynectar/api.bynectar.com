@@ -1,21 +1,82 @@
 {{!< default}}
-<div class="container">
-	<div class="jumbotron"><img src="/images/logo.svg" width="160">
-		<h1>Welcome</h1>
-		<p>This is your new <a href='http://keystonejs.com' target='_blank'>KeystoneJS</a> website.</p>
-		<p>
-			It includes the latest versions of
-			<a href='http://getbootstrap.com/' target='_blank'>Bootstrap</a>
-			and <a href='http://www.jquery.com/' target='_blank'>jQuery</a>.
-		</p>
-		<p>Visit the <a href='http://keystonejs.com/guide' target='_blank'>Getting Started</a> guide to learn how to customise it.</p>
-		<hr>
-		<p>We have created a default Admin user for you with the email <strong>john@bynectar.com</strong> and the password <strong>password</strong>.</p>
-		<p><a href="/keystone/signin" style="margin-right: 10px" class="btn btn-lg btn-primary">Sign in</a> to use the Admin UI.</p>
-		<hr>
-		<p>
-			Remember to <a href='https://github.com/keystonejs/keystone' target='_blank'>Star KeystoneJS on GitHub</a> and
-			<a href='https://twitter.com/keystonejs' target='_blank'>follow @keystonejs</a> on twitter for updates.
-		</p>
-	</div>
-</div>
+{{> head}}
+{{> header}}
+
+	<section id="processHero">
+		<div class="heroBody">
+			<div class="heroText">
+				<h1 class="galleryHero__surTitle">Our Process</h1>
+				<h2 class="galleryHero__title">How We Do What We (Love To) Do</h2>
+			</div>
+		</div>
+	</section>
+
+	<section id="processBody">
+
+		<!-- Process Step 1 -->
+		<div class="processStep">
+			<div class="processStep__text">
+				<h4 class="processStep__number">Step 1</h4>
+				<h3 class="processStep__title">Getting to Know You</h3>
+				<p class="processStep__blurb">Congratulations! You’re getting married and you’re talking to us about your flowers. Our first step is an introductory phone call. We’ll talk about your wedding plans, how the two of you met, how he popped the question. Afterward we’ll send you a questionnaire to get some more detail about your event, but on this call we just want to get to know you better.</p>
+			</div>
+			<div class="processStep__photo">
+				<div class="processStep__image" style="background-image:url({{assets}}/images/gallery/eunice-kyle/eunice-kyle_1059.jpg)"></div>
+				<div class="imageCaption">Photo by <a href="#" title="John the Designer" target="_blank">John the Designer</a></div>
+			</div>
+		</div>
+
+		<!-- Process Step 2 -->
+		<div class="processStep">
+			<div class="processStep__text">
+				<h4 class="processStep__number">Step 2</h4>
+				<h3 class="processStep__title">Real Talk</h3>
+				<p class="processStep__blurb">Ok, this is where things get fun. We’ll meet at the Nectar studio and start imagining the possibilities. We’ll have style boards, you’ll have Pinterest boards, we’ll talk about colors, blooms and decor. By the time you leave you’ll have a first draft of our proposal to take home with you.</p>
+			</div>
+			<div class="processStep__photo">
+				<div class="processStep__image" style="background-image:url({{assets}}/images/gallery/eunice-kyle/eunice-kyle_1059.jpg)"></div>
+				<div class="imageCaption">Photo by <a href="#" title="John the Designer" target="_blank">John the Designer</a></div>
+			</div>
+		</div>
+
+		<!-- Process Step 3 -->
+		<div class="processStep">
+			<div class="processStep__text">
+				<h4 class="processStep__number">Step 3</h4>
+				<h3 class="processStep__title">The Vision</h3>
+				<p class="processStep__blurb">Time for the deets! We put a lot of thought into our proposals. By now we’ve spoken to your other vendors, we’ve visited the venue, we’ve incorporated those details into our proposal, and it shows. We’ll use everything we’ve learned to tailor our proposal to you and your event.</p>
+			</div>
+			<div class="processStep__photo">
+				<div class="processStep__image" style="background-image:url({{assets}}/images/gallery/eunice-kyle/eunice-kyle_1059.jpg)"></div>
+				<div class="imageCaption">Photo by <a href="#" title="John the Designer" target="_blank">John the Designer</a></div>
+			</div>
+		</div>
+
+		<!-- Process Step 4 -->
+		<div class="processStep">
+			<div class="processStep__text">
+				<h4 class="processStep__number">Step 4</h4>
+				<h3 class="processStep__title">The Final Countdown!</h3>
+				<p class="processStep__blurb">Time flies! You’ve been busy going to fittings and finalizing your guest list, and we’ve been coordinating with your vendors and ordering flowers. It’s all coming together and we’ll get in touch to confirm your details, look over seating plans and discuss any changes as the wedding day approaches. The balance of your payment will be due one month out.</p>
+			</div>
+			<div class="processStep__photo">
+				<div class="processStep__image" style="background-image:url({{assets}}/images/gallery/eunice-kyle/eunice-kyle_1059.jpg)"></div>
+				<div class="imageCaption">Photo by <a href="#" title="John the Designer" target="_blank">John the Designer</a></div>
+			</div>
+		</div>
+
+		<!-- Process Step 5 -->
+		<div class="processStep">
+			<div class="processStep__text">
+				<h4 class="processStep__number">Step 5</h4>
+				<h3 class="processStep__title">The Big Day</h3>
+				<p class="processStep__blurb">Before sunrise we’re prepping flowers, designing and packing up. We’ll get to the venue early and start setting up your reception area, putting on boutonnieres and talking to your photographer, coordinator and others. When the music dies down and you retreat to your room with a glass of champagne we’ll start disassembling arbors, packing away centerpieces and</p>
+			</div>
+			<div class="processStep__photo">
+				<div class="processStep__image" style="background-image:url({{assets}}/images/gallery/eunice-kyle/eunice-kyle_1059.jpg)"></div>
+				<div class="imageCaption">Photo by <a href="#" title="John the Designer" target="_blank">John the Designer</a></div>
+			</div>
+		</div>
+
+	</section>
+{{> footer}}

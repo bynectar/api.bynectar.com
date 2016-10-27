@@ -82,6 +82,8 @@ keystone.Email.defaults.templateEngine = require('handlebars');
 keystone.set('nav', {
 	posts: ['posts', 'post-categories'],
 	galleries: 'galleries',
+	photos: 'photos',
+	vendors: 'vendors',
 	enquiries: 'enquiries',
 	users: 'users',
 });

@@ -1,0 +1,78 @@
+html
+	font-family font-work
+	line-height 1.75
+	color dk-gray
+	@media (min-width: small)
+		font-size 12px
+	@media (min-width: medium)
+		font-size 14px
+	@media (min-width: large)
+		font-size 14px
+
+p
+	margin 0 0 1rem
+
+heading()
+	font-weight normal
+	line-height 1.25
+	margin 0 0 .25em
+
+pageTitle()
+	heading()
+	font-family font-playfair
+	font-size 4rem
+	font-style italic
+	font-weight normal
+
+surTitle()
+	font-family font-work
+	font-size 1rem
+	font-weight 400
+	text-transform uppercase
+	letter-spacing .1rem
+	color mid-gray
+
+h1
+	heading()
+	font-family font-playfair
+	font-size 4rem
+
+h2
+	heading()
+	font-family font-playfair
+	font-size 4rem
+
+h3
+	heading()
+	font-family font-playfair
+	font-size 3rem
+
+h4
+	heading()
+	font-family font-work
+	font-size 1.5rem
+	font-style normal
+
+h5
+	heading()
+	font-family font-work
+	font-size 1rem
+	font-style normal
+
+h6
+	heading()
+	font-size 1rem
+	font-style normal
+
+a
+	color amber
+	cursor pointer
+
+blockquote
+	font-size 3rem
+	line-height 1.25
+	margin 0 4rem 1rem
+	&:before
+		content "“"
+	&:after
+		content "”"

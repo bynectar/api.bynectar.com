@@ -1,32 +1,89 @@
-<div class="container">
-	<h1>Gallery</h1>
-</div>
-<div class="container">
-	<!-- if galleries -->
-	{{#if galleries}}
-		{{#each galleries}}
-		<h2>{{name}}
-			<div class="pull-right text-muted">19th May 2014</div>
-		</h2>
-		<div class="row gallery-images">
-				{{#if heroImage}}
-				<div class="col-sm-4 col-md-4 gallery-image">
-					<img src="{{cloudinaryUrl heroImage width='680' height='680'}}" class="img-rounded">
-				</div>
-				{{/if}}
-				<div class="col-sm-8 col-md-8">
-					<div class="row">
-						{{#each images}}
-						<div class="col-xs-4 col-sm-4 col-md-3 gallery-image">
-							<img src="{{cloudinaryUrl width='300' height='300'}}" class="img-rounded">
+{{> head}}
+{{> header}}
+	<section id="galleryHero">
+		<div class="heroBody">
+			<div class="heroText">
+				<h2 class="galleryHero__surTitle">{{data.gallery.subtitle}}</h2>
+				<h1 class="galleryHero__title">{{data.gallery.title}}</h1>
+			</div>
+		</div>
+	</section>
+
+	<section id="galleryBody">
+
+		<!-- Gallery Thumbnail -->
+		<div class="galleryThumbnail">
+			<div class="galleryThumbnail__text">
+				<h4 class="galleryThumbnail__surTitle">{{data.gallery.blurb.subtitle}}</h4>
+				<h3 class="galleryThumbnail__title">{{data.gallery.blurb.title}}</h3>
+				<p class="galleryThumbnail__blurb">{{{data.gallery.blurb.body}}}</p>
+			</div>
+			<div class="galleryThumbnail__photo">
+				<div class="thumbWrapper thumbHover" data-slide="{{data.gallery.thumbnail.image.url}}">
+					<img class="thumbImage" src="{{data.gallery.thumbnail.image.url}}">
+					<div class="thumbOverlay">
+						<div class="thumbText">
+							<p>{{data.gallery.thumbnail.caption}}</p>
+							<span class="thumbByline">Photo by <a href="{{data.gallery.thumbnail.photographer.website}}" title="{{data.gallery.thumbnail.photographer.name}}" target="_blank">{{data.gallery.thumbnail.photographer.name}}</a></span>
 						</div>
-						{{/each}}
 					</div>
 				</div>
+			</div>
 		</div>
-		{{/each}}
-	{{else}}
-	<!-- else -->
-	<h3 class="text-muted">There are no image galleries yet.</h3>
-	{{/if}}
+
+		<div class="grid" id="galleryGrid">
+			{{#each data.gallery.gridImages}}
+			<div class="galleryGrid__item">
+				<div class="thumbWrapper thumbHover" data-slide="{{image.url}}">
+					<img class="thumbImage" src="{{image.url}}" alt="{{title}}">
+					<div class="thumbOverlay">
+						<div class="thumbText">
+							<p>{{caption}}</p>
+							<span class="thumbByline">Photo by <a href="{{photographer.website}}" title="{{photographer.name}}" target="_blank">{{photographer.name}}</a></span>
+						</div>
+					</div>
+				</div>
+			</div>
+			{{/each}}
+		</div>
+
+		<div id="galleryQuote">
+			<div id="galleryQuote__photo" data-slide="{{data.gallery.quoteImage.image.url}}" style="background-image:url({{data.gallery.quoteImage.image.url}})">
+				<div id="galleryQuote__photoCredit">Photo by <a href="{{data.gallery.quoteImage.photographer.website}}" title="{{data.gallery.quoteImage.photographer.name}}" target="_blank">{{data.gallery.quoteImage.photographer.name}}</a></div>
+			</div>
+			<div id="galleryQuote__overlay">
+				<div id="galleryQuote__text">
+					<blockquote>{{data.gallery.quoteBody}}</blockquote>
+					<p id="galleryQuote__byline">{{data.gallery.quoteByline}}</p>
+				</div>
+			</div>
+		</div>
+
+		<div id="galleryInfo">
+			{{#if data.gallery.vendors}}
+			<div id="galleryInfo__vendors">
+				<h3>Vendors</h3>
+				<ul>
+					{{#each data.gallery.vendors}}
+					<li>{{type}}: <a href="{{website}}" title="{{name}}" target="_blank">{{name}}</a></li>
+					{{/each}}
+				</ul>
+			</div>
+			{{/if}}
+			<div id="galleryInfo__cta">
+				<h3>Get in Touch</h3>
+				<a href="#">Let's Talk.</a>
+			</div>
+		</div>
+
+	</section>
+
+	<div id="galleryModal">
+		<div id="galleryModal__slider">
+			<div id="galleryModal__close"><i class="material-icons md-36">close</i></div>
+			<div id="galleryModal__slideContainer"></div>
+		</div>
+	</div>
+
 </div>
+{{> footer}}

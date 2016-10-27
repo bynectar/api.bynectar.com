@@ -1,0 +1,89 @@
+imgLeftTextRight()
+  feature()
+  display flex
+  flex-direction row
+  flex-wrap wrap
+  align-items center
+
+imgRightTextLeft()
+  feature()
+  display flex
+  flex-direction row-reverse
+  flex-wrap wrap
+  align-items center
+
+#home__feature
+  column(small,12)
+  background-size cover
+  aspect(small,4,1)
+  display flex
+  align-items center
+  color white
+  h1
+    width 100%
+  #homeFeature__column
+    columnMaxWidth(1100px)
+    .block__text
+      padColumn(small,2,2)
+      padColumn(medium,7,0)
+
+#home__block1
+  columnMaxWidth(1100px)
+  imgLeftTextRight()
+
+#home__block2
+  columnMaxWidth(1100px)
+  imgRightTextLeft()
+
+#home__block3
+  columnMaxWidth(1100px)
+  imgLeftTextRight()
+
+#home__block4
+  columnMaxWidth(1100px)
+  imgRightTextLeft()
+
+.block__text
+  column(small,8)
+  column(medium,4)
+  padColumn(small,2,2)
+  padColumn(medium,1,1)
+  vPad(small,4rem,4rem)
+  vPad(medium,0,0)
+  padding 1rem 0
+
+.block__photo
+  column(small,12)
+  column(medium,6)
+
+.block__img
+  background-size cover
+  aspect(small,3,2)
+  aspect(medium,1,1)
+
+#home__block5
+  column(small,12)
+  background-size cover
+  aspect(small,4,1)
+  display flex
+  align-items center
+  color white
+  h1
+    width 100%
+  #block5__column
+    columnMaxWidth(1100px)
+
+#home__block6
+  column(small,12)
+  background-size cover
+  aspect(small,4,1)
+  display flex
+  align-items center
+  color white
+  h1
+    width 100%
+  #block6__column
+    columnMaxWidth(1100px)
+    .block__text
+      padColumn(small,2,2)
+      padColumn(medium,7,0)

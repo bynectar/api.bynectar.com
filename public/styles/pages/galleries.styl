@@ -1,0 +1,257 @@
+// Gallery Image Styles
+.thumbnailWrapper
+	border .25rem solid white
+	background-color mid-gray
+	box-sizing border-box
+	position relative
+	overflow hidden
+	.thumbnailImage
+		thumbnailImage()
+		aspect(small,6,5)
+		transition all linear .2s
+	.thumbnailPhotoCredit
+		position absolute
+		bottom 1rem
+		right 1.5rem
+		z-index 10
+		color white
+	.thumbnailOverlay
+		positionAll(0)
+		background rgba(0,0,0,0.3)
+		background rgba(97,58,12,.3)
+		display flex
+		align-items center
+		display flex
+		flex-direction row
+		align-items center
+		opacity 0
+		transition all linear .2s
+		cursor pointer
+		.thumbnailText
+			flex 1
+			padding 15% 10% 10%
+			text-align center
+			color white
+			transition all ease-out .3s
+			p
+				heading()
+				font-family font-playfair
+				font-size 1.5rem
+				margin-bottom 1.5rem
+			a
+				color white
+				transition all linear .1s
+				&:hover
+					color amber
+					.fa-pinterest
+						color amber
+			.thumbnailByline
+				margin-bottom 1.5rem
+			.fa-pinterest
+				font-size 1.5rem
+				color white
+				margin-bottom 1.5rem
+				transition all linear .1s
+	&.thumbnailHover:hover
+		.thumbnailImage
+			filter blur(5px)
+		.thumbnailOverlay
+			opacity 1
+			.thumbnailText
+				padding-top 10%
+
+.thumbWrapper
+	aspect(small,6,5)
+	width 100%
+	height 0
+	border .25rem solid white
+	background-color mid-gray
+	box-sizing border-box
+	position relative
+	overflow hidden
+	.thumbImage
+		positionAll(0)
+		transition all linear .2s
+		width 100%
+		height 100%
+		object-fit cover
+	.thumbPhotoCredit
+		position absolute
+		bottom 1rem
+		right 1.5rem
+		z-index 10
+		color white
+	.thumbOverlay
+		positionAll(0)
+		background rgba(0,0,0,0.3)
+		background rgba(97,58,12,.3)
+		display flex
+		align-items center
+		display flex
+		flex-direction row
+		align-items center
+		opacity 0
+		transition all linear .2s
+		cursor pointer
+		.thumbText
+			flex 1
+			padding 15% 10% 10%
+			text-align center
+			color white
+			transition all ease-out .3s
+			p
+				heading()
+				font-family font-playfair
+				font-size 1.5rem
+				margin-bottom 1.5rem
+			a
+				color white
+				transition all linear .1s
+				&:hover
+					color amber
+					.fa-pinterest
+						color amber
+			.thumbByline
+				margin-bottom 1.5rem
+			.fa-pinterest
+				font-size 1.5rem
+				color white
+				margin-bottom 1.5rem
+				transition all linear .1s
+	&.thumbHover:hover
+		.thumbImage
+			filter blur(5px)
+		.thumbOverlay
+			opacity 1
+			.thumbText
+				padding-top 10%
+
+// Gallery Listing View Styles
+#galleriesHero,#galleryHero
+	textHero()
+	aspect(small,3,1)
+
+#galleryBody
+	margin .25rem
+
+.galleryThumbnail
+	flexContainer()
+	box-sizing border-box
+	.galleryThumbnail__text
+		flex 1
+		padding .25rem
+		box-sizing border-box
+		text-align center
+		h4
+			surTitle()
+		& > *
+			padWidth(small,20%,20%)
+	.galleryThumbnail__photo
+		flex 1
+
+// Gallery View Styles
+#galleryGrid
+	.galleryGrid__item
+		border .25rem solid white
+		box-sizing border-box
+
+#galleryQuote
+	padding .25rem
+	position relative
+	#galleryQuote__photo
+		thumbnailImage()
+		aspect(small,2,1)
+		cursor pointer
+	#galleryQuote__overlay
+		positionAll(.25rem)
+		display flex
+		flex-direction row-reverse
+		align-items center
+		color white
+		box-sizing border-box
+		background linear-gradient(90deg,rgba(0,0,0,0),rgba(0,0,0,0.6))
+		pointer-events none
+		#galleryQuote__text
+			flex-basis 50%
+			padding 2rem
+			text-align center
+			box-sizing border-box
+			blockquote
+				heading()
+				font-family font-playfair
+				font-style italic
+				font-size 2.5em
+			#galleryQuote__byline
+				surTitle()
+				color white
+
+#galleryInfo
+	display flex
+	text-align center
+	#galleryInfo__vendors
+		flex 1
+		padding 6rem 0
+		ul
+			margin 0
+			padding 0
+			list-style none
+			li
+				padding .25rem
+	#galleryInfo__cta
+		flex 1
+		padding 6rem 0
+
+#galleryModal
+	display none
+	position fixed
+	top 0
+	right 0
+	bottom 0
+	left 0
+	z-index 100
+	overflow hidden
+	background rgba(255,255,255,0.9)
+	#galleryModal__slider
+		positionAll(2rem)
+		transition all ease-out .2s
+		#galleryModal__close
+			position absolute
+			top 0
+			right 0
+			z-index 10
+			cursor pointer
+			font-size 1.5rem
+			&:hover
+				color amber
+		#galleryModal__slideContainer
+			positionAll(0)
+			div
+				height 100%
+				background-position center center
+				background-size contain
+				background-repeat no-repeat
+		ul.flex-direction-nav
+			list-style none
+			padding 0
+			positionAll(0)
+			z-index 9
+			li
+				position absolute
+				top 0
+				bottom 0
+				display flex
+				align-items center
+				padding 0
+				a
+					font-family "Material Icons"
+					font-size 2rem
+					text-decoration none
+					color dk-gray
+					&:hover
+						color amber
+				&.flex-nav-prev
+					left 0
+				&.flex-nav-next
+					right 0
+				&:hover
+					color amber

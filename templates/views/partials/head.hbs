@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>			<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>				 <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>				 <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>{{title}}</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	{{!-- Place favicon.ico and apple-touch-icon.png in the root directory --}}
+
+{{!-- Styles --}}
+	<script src="//use.typekit.net/ljs2rqe.js"></script>
+	<script>try{Typekit.load();}catch(e){}</script>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i|Cabin:400,400i,700,700i" type="text/css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<link rel="stylesheet" href="/styles/site.css">
+
+	{{!-- This file provides the default styling for the KeystoneJS Content Editor
+		- only renders when user is logged in and admin--}}
+	{{{isAdminEditorCSS user}}}
+
+	{{!-- Head Scripts --}}
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+
+</head>
+<body class="{{bodyClass}}">
+	<!--
+		Flash messages allow you to display once-off status messages to users, e.g. form
+		validation errors, success messages, etc
+	-->
+	{{#if messages}}
+	<div id="flash-messages" class="container">
+		{{#if messages.info}}
+		<div class="alert alert-info">
+				{{{flashMessages messages.info}}}
+		</div>
+		{{/if}}
+		{{#if messages.success}}
+		<div class="alert alert-success">
+				{{{flashMessages messages.success}}}
+		</div>
+		{{/if}}
+		{{#if messages.warning}}
+		<div class="alert alert-warning">
+				{{{flashMessages messages.warning}}}
+		</div>
+		{{/if}}
+		{{#if messages.error}}
+		<div class="alert alert-danger">
+				{{{flashMessages messages.error}}}
+		</div>
+		{{/if}}
+	</div>
+	{{/if}}

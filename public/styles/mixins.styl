@@ -1,0 +1,161 @@
+// Sections
+columnMaxWidth(w)
+	width 100%
+	max-width w
+	margin-left auto
+	margin-right auto
+
+// Flexbox Structure
+flexContainer() // Flex Container with vertical centering
+	display flex
+	align-items center
+
+flexLTR() // Horizontal Flexbox ordered Left-to-Right
+	flex-direction row
+
+flexRTL() // Horizontal Flexbox ordered Left-to-Right (Reversed)
+	flex-direction row-reverse
+
+// Columns
+column(breakpoint,count)
+	@media (min-width: breakpoint)
+		float left
+		box-sizing content-box
+		width percentage(count/columns)
+		&:after
+			content " "
+			display block
+			clear both
+
+padColumn(breakpoint,left,right)
+	@media (min-width: breakpoint)
+		padding-left percentage(left/columns)
+		padding-right percentage(right/columns)
+
+padHeight(breakpoint,top,bottom)
+	@media (min-width: breakpoint)
+		padding-top top
+		padding-bottom bottom
+
+padWidth(breakpoint,left,right)
+	@media (min-width: breakpoint)
+		padding-left left
+		padding-right right
+
+push(breakpoint,count)
+	@media (min-width: breakpoint)
+		margin-left unit(count * (100/columns), '%')
+
+centered-column()
+	float none
+	margin 0 auto
+
+// Misc
+aspect(breakpoint,w,h)
+	@media (min-width: breakpoint)
+		width 100%
+		padding-top percentage(h/w/2)
+		padding-bottom percentage(h/w/2)
+
+vPad(breakpoint,top,bottom)
+	@media (min-width: breakpoint)
+		padding-top top
+		padding-bottom bottom
+
+positionFull()
+	position absolute
+	top 0
+	right 0
+	bottom 0
+	left 0
+
+positionAll(val)
+	position absolute
+	top val
+	right val
+	bottom val
+	left val
+
+// Images
+thumbnailImage()
+	background-size cover
+	background-position center center
+	position relative
+	box-sizing border-box
+	cursor pointer
+	transition opacity linear .2s
+
+// Feature Blocks
+feature()
+	background-position center center
+	background-size cover
+
+featureViewport()
+	feature()
+	height 100%
+
+// Buttons
+.button-radius( tl = 4px, tr = 4px, br = 4px, bl = 4px )
+	-webkit-border-top-left-radius = tl
+	-webkit-border-top-right-radius = tr
+	-webkit-border-bottom-right-radius = br
+	-webkit-border-bottom-left-radius = bl
+
+	-moz-border-radius-topleft = tl
+	-moz-border-radius-topright = tr
+	-moz-border-radius-bottomright = br
+	-moz-border-radius-bottomleft = bl
+
+	border-top-left-radius = tl
+	border-top-right-radius = tr
+	border-bottom-right-radius = br
+	border-bottom-left-radius = bl
+
+// Gradients
+.gradient(startColor = #eee, endColor = white)
+	background-color = startColor
+	background = -webkit-gradient(linear, left top, left bottom, from(startColor), to(endColor))
+	background = -webkit-linear-gradient(top, startColor, endColor)
+	background = -moz-linear-gradient(top, startColor, endColor)
+	background = -ms-linear-gradient(top, startColor, endColor)
+	background = -o-linear-gradient(top, startColor, endColor)
+
+// Transitions
+.transition(transition)
+	-webkit-transition = transition
+	-moz-transition = transition
+	-ms-transition = transition
+	-o-transition = transition
+
+// Typography
+center()
+	text-align center
+
+// Layout
+textHero()
+	text-align center
+	.heroBody
+		positionFull()
+		display flex
+		align-items center
+		.heroText
+			flex 1
+			.galleryHero__title
+				pageTitle()
+			.galleryHero__surTitle
+				surTitle()
+
+imageHero()
+	text-align center
+	background-position center center
+	background-size cover
+	.heroBody
+		positionFull()
+		display flex
+		align-items center
+		.heroText
+			flex 1
+			.galleryHero__title
+				pageTitle()
+			.galleryHero__surTitle
+				surTitle()
