@@ -11,6 +11,22 @@ exports = module.exports = function (req, res) {
 	// Set appropriate heading type to use appropriate styles
 	locals.headingType = 'image';
 
+	locals.data = {
+		gallery: [],
+	};
+
+	// Load the current gallery
+	view.on('init', function (next) {
+
+		var q = keystone.list('Gallery').model.find().limit(1).populate('thumbnail gridImages vendors quoteImage');
+
+		q.exec(function (err, result) {
+			locals.data.gallery = result;
+			next(err);
+		});
+
+	});
+
 	// Render the view
 	view.render('index');
 };

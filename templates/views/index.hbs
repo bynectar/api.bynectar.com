@@ -13,48 +13,35 @@
 
 	<section id="homeBody">
 
-		<!-- About Block 1 -->
-		<div class="aboutBlock">
-			<div class="aboutBlock__text">
-				<h3 class="aboutBlock__title">Getting to Know You</h3>
-				<p class="aboutBlock__blurb">Congratulations! You’re getting married and you’re talking to us about your flowers. Our first step is an introductory phone call. We’ll talk about your wedding plans, how the two of you met, how he popped the question. Afterward we’ll send you a questionnaire to get some more detail about your event, but on this call we just want to get to know you better.</p>
-			</div>
-			<div class="aboutBlock__photo">
-				<div class="thumbWrapper thumbHover">
-					<img class="thumbImage" src="https://unsplash.it/900/700/?random">
-					<div class="thumbOverlay">
-						<div class="thumbText">
-							<p>Lorem ipsum dolor sit amet</p>
-							<span class="thumbByline">Photo by <a href="{{data.gallery.thumbnail.photographer.website}}" title="{{data.gallery.thumbnail.photographer.name}}" target="_blank">Nectar</a></span>
-						</div>
+		<!-- if galleries -->
+		{{#if data.gallery}}
+			{{#each data.gallery}}
+			<!-- Gallery Thumbnail -->
+			<div class="galleryThumbnail">
+				<div class="galleryThumbnail__text">
+					<h4 class="galleryThumbnail__location">From our Galleries</h4>
+					<h3 class="galleryThumbnail__title">{{title}}</h3>
+					<p class="galleryThumbnail__blurb">{{{blurb.body}}}</p>
+					<a href="/galleries/{{key}}" class="galleryThumbnail__cta">View Gallery</a>
+				</div>
+				<div class="galleryThumbnail__photo">
+					<div class="thumbnailWrapper">
+						<a href="/galleries/{{key}}" title="{{title}}">
+							<div class="galleryThumbnail__image thumbnailImage" style="background-image:url({{cloudinaryUrl thumbnail.image width='1100' height='900' crop='fill'}})"></div>
+						</a>
+						<div class="thumbnailPhotoCredit">Photo by <a href="http://www.photographer-website.com" title="Photographer's Name" target="_blank">Photographer's Name</a></div>
 					</div>
 				</div>
 			</div>
-		</div>
+			{{/each}}
+		{{/if}}
 
 		<!-- About Block 1 -->
 		<div class="aboutBlock">
+			<div id="nectarFeed"></div>
 			<div class="aboutBlock__text">
-				<h3 class="aboutBlock__title">Getting to Know You</h3>
-				<p class="aboutBlock__blurb">Congratulations! You’re getting married and you’re talking to us about your flowers. Our first step is an introductory phone call. We’ll talk about your wedding plans, how the two of you met, how he popped the question. Afterward we’ll send you a questionnaire to get some more detail about your event, but on this call we just want to get to know you better.</p>
-			</div>
-			<div class="aboutBlock__photo">
-				<div class="thumbWrapper thumbHover">
-					<img class="thumbImage" src="https://unsplash.it/900/700/?random">
-					<div class="thumbOverlay">
-						<div class="thumbText">
-							<p>Lorem ipsum dolor sit amet</p>
-							<span class="thumbByline">Photo by <a href="{{data.gallery.thumbnail.photographer.website}}" title="{{data.gallery.thumbnail.photographer.name}}" target="_blank">Nectar</a></span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- About Block 1 -->
-		<div class="aboutBlock">
-			<div class="aboutBlock__text">
-				<h3 class="aboutBlock__title">Getting to Know You</h3>
+				<h4 class="aboutBlock__subtitle">Our Process</h4>
+				<h3 class="aboutBlock__title">How we do it.</h3>
 				<p class="aboutBlock__blurb">Congratulations! You’re getting married and you’re talking to us about your flowers. Our first step is an introductory phone call. We’ll talk about your wedding plans, how the two of you met, how he popped the question. Afterward we’ll send you a questionnaire to get some more detail about your event, but on this call we just want to get to know you better.</p>
 			</div>
 			<div class="aboutBlock__photo">

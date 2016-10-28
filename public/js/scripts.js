@@ -60,4 +60,12 @@ $(document).ready(function(){
 			400: 1
 		}
 	});
+
+	var nectarFeed = new Instafeed({
+		get: 'user',
+		userId: '194321043',
+		clientId: '1b46764a291c4f9c94d07878c23a00f2',
+		target: 'nectarFeed'
+	});
+	nectarFeed.run();
 });
