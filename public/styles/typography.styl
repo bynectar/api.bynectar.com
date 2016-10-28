@@ -67,6 +67,9 @@ h6
 a
 	color amber
 	cursor pointer
+	text-decoration none
+	&:hover
+		text-decoration underline
 
 blockquote
 	font-size 3rem
@@ -76,3 +79,35 @@ blockquote
 		content "“"
 	&:after
 		content "”"
+
+// Forms
+form
+
+	fieldset
+		border none
+		padding .5rem 0
+		text-align left
+
+	label
+		box-sizing border-box
+		display block
+		width 100%
+		padding 0 .5rem
+		font-size .75rem
+		color dk-gray
+
+	input
+		box-sizing border-box
+		width 100%
+		padding 0 .5rem
+		font-size 1rem
+		line-height 3rem
+		background lt-gray
+		border-color mid-gray
+		border-style solid
+		border-width 0 0 1px
+		&[type="textarea"]
+			height 9rem
+
+	button, input[type="submit"]
+		button()

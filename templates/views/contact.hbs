@@ -1,44 +1,68 @@
-<div class="container">
-	<h1>Contact Us</h1>
-</div>
-<div class="container">
-	<div class="row">
-		<div class="col-sm-8 col-md-6">
-			{{#if enquirySubmitted}}
-			<h3>Thanks for getting in touch.</h3>
-			{{else}}
-			<form method="post">
-				<input type="hidden" name="action" value="contact">
-				<div class="form-group {{#if validationErrors.name}}has-error{{/if}}">
-					<label>Name</label>
-					<input type="text" name="name.full"  class="form-control" value="{{formData.[name.full]}}">
-				</div>
-				<div class="form-group {{#if validationErrors.email}}has-error{{/if}}">
-					<label>Email</label>
-					<input type="email" name="email" class="form-control" value="{{formData.email}}">
-				</div>
-				<div class="form-group">
-					<label>Phone</label>
-					<input type="text" name="phone" placeholder="(optional)" class="form-control" value="{{formData.phone}}">
-				</div>
-				<div class="form-group {{#if validationErrors.enquiryType}}has-error{{/if}}">
-					<label>What are you contacting us about?</label>
-					<select name="enquiryType" class="form-control">
-						<option value="">(select one)</option>
-						{{#each enquiryTypes}}
-						<option value="{{value}}">{{label}}</option>
-						{{/each}}
-					</select>
-				</div>
-				<div class="form-group {{#if validationErrors.message}}has-error{{/if}} ">
-					<label>Message</label>
-					<textarea name="message" placeholder="Leave us a message..." rows="4" class="form-control">{{formData.message}}</textarea>
-				</div>
-				<div class="form-actions">
-					<button type="submit" class="btn btn-primary">Send</button>
-				</div>
-			</form>
-			{{/if}}
+{{> head}}
+{{> header}}
+
+	<section id="contactHero">
+		<div class="heroBody">
+			<div class="heroText">
+				<h1 class="heroText__surTitle">Contact Us</h1>
+				<h2 class="heroText__title">We love talking about this stuff</h2>
+			</div>
 		</div>
-	</div>
-</div>
+	</section>
+
+	<section id="contactBody">
+		<div class="contactColumn">
+			<h3>Getting Married?</h3>
+			<form method="post">
+				<fieldset>
+					<label for="field1">Your Name</label>
+					<input type="text" name="field1" placeholder="Your full name"/>
+				</fieldset>
+				<fieldset>
+					<label for="field2">Your Email</label>
+					<input type="text" name="field2" placeholder="Your full name"/>
+				</fieldset>
+				<fieldset>
+					<label for="field3">Your Wedding Date</label>
+					<input type="text" name="field3" placeholder="Your full name"/>
+				</fieldset>
+				<fieldset>
+					<label for="field4">Number of Guests</label>
+					<input type="text" name="field4" placeholder="Your full name"/>
+				</fieldset>
+				<fieldset>
+					<label for="field5">Your Budget</label>
+					<input type="text" name="field5" placeholder="Your full name"/>
+				</fieldset>
+				<fieldset>
+					<label for="field6">Notes</label>
+					<input type="textarea" name="field6"/>
+				</fieldset>
+				<button type="submit">Send</button>
+			</form>
+		</div>
+
+		<div class="contactColumn">
+			<div class="contactColumn__group">
+				<h3>Social</h3>
+				<p><a href="#"><i class="fa fa-instagram"></i> Instagram</a></p>
+				<p><a href="#"><i class="fa fa-facebook"></i> Facebook</a></p>
+			</div>
+			<div class="contactColumn__group">
+				<h3>Phone</h3>
+				<p>(617) 595-2087</p>
+			</div>
+			<div class="contactColumn__group">
+				<h3>Email</h3>
+				<p>misty(at)bynectar.com</p>
+			</div>
+			<div class="contactColumn__group">
+				<h3>The Studio</h3>
+				<p>By appointment only</p>
+				<p>52 Lake Avenue.</br>
+				Woburn, MA 01801</p>
+			</div>
+		</div>
+	</section>
+
+{{> footer}}
