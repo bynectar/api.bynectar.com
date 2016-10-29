@@ -25,11 +25,16 @@
 					<a href="/galleries/{{key}}" class="galleryThumbnail__cta">View Gallery</a>
 				</div>
 				<div class="galleryThumbnail__photo">
-					<div class="thumbnailWrapper">
+					<div class="thumbWrapper thumbHover" data-slide="{{data.gallery.thumbnail.image.secure_url}}">
 						<a href="/galleries/{{key}}" title="{{title}}">
-							<div class="galleryThumbnail__image thumbnailImage" style="background-image:url({{cloudinaryUrl thumbnail.image width='1100' height='900' crop='fill'}})"></div>
+							<img class="thumbImage" src="{{cloudinaryUrl thumbnail.image width='1100' height='900' crop='fill'}}">
 						</a>
-						<div class="thumbnailPhotoCredit">Photo by <a href="http://www.photographer-website.com" title="Photographer's Name" target="_blank">Photographer's Name</a></div>
+						<div class="thumbOverlay">
+							<div class="thumbText">
+								<p>{{thumbnail.caption}}</p>
+								<span class="thumbByline">Photo by <a href="{{thumbnail.photographer.website}}" title="{{thumbnail.photographer.name}}" target="_blank">{{thumbnail.photographer.name}}</a></span>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>

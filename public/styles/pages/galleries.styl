@@ -94,7 +94,8 @@
 		align-items center
 		opacity 0
 		transition all linear .2s
-		cursor pointer
+			&.thumbHover
+				cursor pointer
 		.thumbText
 			flex 1
 			padding 15% 10% 10%
@@ -107,6 +108,7 @@
 				font-size 1.5rem
 				margin-bottom 1.5rem
 			a
+				text-decoration underline
 				color white
 				transition all linear .1s
 				&:hover
@@ -120,6 +122,13 @@
 				color white
 				margin-bottom 1.5rem
 				transition all linear .1s
+	& > .thumbByline
+		position absolute
+		bottom .75rem
+		right 1rem
+		left 1rem
+		text-align right
+		color white
 	&.thumbHover:hover
 		.thumbImage
 			filter blur(5px)

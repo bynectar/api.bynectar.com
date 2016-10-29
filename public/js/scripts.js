@@ -21,6 +21,8 @@ $(document).ready(function(){
 		$('#galleryModal__slideContainer').append(div);
 		$(this).click(function(){
 			modalOpen();
+		}).children('a').click(function(e){
+			e.stopPropagation();
 		});
 	});
 	$('#galleryModal__close').click(function(){
