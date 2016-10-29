@@ -25,17 +25,7 @@
 					<a href="/galleries/{{key}}" class="galleryThumbnail__cta">View Gallery</a>
 				</div>
 				<div class="galleryThumbnail__photo">
-					<div class="thumbWrapper thumbHover" data-slide="{{data.gallery.thumbnail.image.secure_url}}">
-						<a href="/galleries/{{key}}" title="{{title}}">
-							<img class="thumbImage" src="{{cloudinaryUrl thumbnail.image width='1100' height='900' crop='fill'}}">
-						</a>
-						<div class="thumbOverlay">
-							<div class="thumbText">
-								<p>{{thumbnail.caption}}</p>
-								<span class="thumbByline">Photo by <a href="{{thumbnail.photographer.website}}" title="{{thumbnail.photographer.name}}" target="_blank">{{thumbnail.photographer.name}}</a></span>
-							</div>
-						</div>
-					</div>
+					{{> image image=thumbnail key=key}}
 				</div>
 			</div>
 			{{/each}}
@@ -50,15 +40,11 @@
 				<p class="aboutBlock__blurb">Congratulations! You’re getting married and you’re talking to us about your flowers. Our first step is an introductory phone call. We’ll talk about your wedding plans, how the two of you met, how he popped the question. Afterward we’ll send you a questionnaire to get some more detail about your event, but on this call we just want to get to know you better.</p>
 			</div>
 			<div class="aboutBlock__photo">
-				<div class="thumbWrapper thumbHover">
-					<img class="thumbImage" src="https://unsplash.it/900/700/?random">
-					<div class="thumbOverlay">
-						<div class="thumbText">
-							<p>Lorem ipsum dolor sit amet</p>
-							<span class="thumbByline">Photo by <a href="{{data.gallery.thumbnail.photographer.website}}" title="{{data.gallery.thumbnail.photographer.name}}" target="_blank">Nectar</a></span>
-						</div>
-					</div>
-				</div>
+				{{> imageCustom
+					photographer='Nectar'
+					website='nectar.com'
+					src='https://unsplash.it/900/700/?random'
+				}}
 			</div>
 		</div>
 

@@ -94,8 +94,7 @@
 		align-items center
 		opacity 0
 		transition all linear .2s
-			&.thumbHover
-				cursor pointer
+		pointer-events none
 		.thumbText
 			flex 1
 			padding 15% 10% 10%
@@ -108,20 +107,13 @@
 				font-size 1.5rem
 				margin-bottom 1.5rem
 			a
-				text-decoration underline
-				color white
+				whiteUnderline()
 				transition all linear .1s
 				&:hover
-					color amber
 					.fa-pinterest
 						color amber
 			.thumbByline
 				margin-bottom 1.5rem
-			.fa-pinterest
-				font-size 1.5rem
-				color white
-				margin-bottom 1.5rem
-				transition all linear .1s
 	& > .thumbByline
 		position absolute
 		bottom .75rem
@@ -129,7 +121,43 @@
 		left 1rem
 		text-align right
 		color white
-	&.thumbHover:hover
+	.thumbActions
+		display flex
+		align-items center
+		background-image gradientOverlay
+		position absolute
+		bottom 0
+		left 0
+		right 0
+		height 2.5rem
+		padding .75rem 1.25rem
+		opacity 0
+		transition all linear .2s
+		.thumbActions__action
+			display inline-block
+			color white
+			font-size 1.5rem
+			margin-right 1rem
+			margin-top 3rem
+			transition all ease-in .1s
+		.thumbActions__byline
+			flex 1
+			text-align right
+			color white
+			margin-top 3rem
+			transition all ease-in .1s
+		a
+			color white
+			whiteUnderline()
+	&:hover
+		.thumbActions
+			background-image gradientOverlay
+			opacity 1
+			.thumbActions__action
+				margin-top 0
+			.thumbActions__byline
+				margin-top 0
+	&.thumbHover:hover,&.thumbWrapper--toggleOverlay
 		.thumbImage
 			filter blur(5px)
 		.thumbOverlay
