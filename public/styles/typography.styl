@@ -65,8 +65,12 @@ h6
 	font-style normal
 
 a
+	color amber
 	amberUnderline()
-	
+
+a.cta
+	button()
+
 blockquote
 	font-size 3rem
 	line-height 1.25
@@ -75,6 +79,16 @@ blockquote
 		content "“"
 	&:after
 		content "”"
+
+// Photo Credit
+.photoCredit
+	position absolute
+	bottom .75rem
+	right 1rem
+	color white
+	a
+		color white
+		whiteUnderline()
 
 // Forms
 form

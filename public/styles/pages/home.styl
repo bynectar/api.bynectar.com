@@ -10,16 +10,20 @@
 	padding .25rem
 	box-sizing border-box
 
-	.aboutBlock
+	.homeBlock
 		flexContainer()
 		text-align center
 		&:nth-child(2n+2)
 			flex-direction row-reverse
-		.aboutBlock__photo
+		.homeBlock__photo
 			flex 1
-		.aboutBlock__text
+		.homeBlock__text
 			flex 1
 			box-sizing border-box
-			& > *
+			.homeBlock__subtitle
+				surTitle()
+			& > *:not(a)
 				padWidth(small,10%,10%)
 				padWidth(medium,20%,20%)
+			a.cta
+				margin-top 2rem

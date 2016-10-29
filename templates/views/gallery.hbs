@@ -33,7 +33,6 @@
 
 		<div id="galleryQuote">
 			<div id="galleryQuote__photo" data-slide="{{data.gallery.quoteImage.image.secure_url}}" style="background-image:url({{data.gallery.quoteImage.image.secure_url}})">
-				<div id="galleryQuote__photoCredit">Photo by <a href="{{data.gallery.quoteImage.photographer.website}}" title="{{data.gallery.quoteImage.photographer.name}}" target="_blank">{{data.gallery.quoteImage.photographer.name}}</a></div>
 			</div>
 			<div id="galleryQuote__overlay">
 				<div id="galleryQuote__text">
@@ -41,6 +40,7 @@
 					<p id="galleryQuote__byline">{{data.gallery.quoteByline}}</p>
 				</div>
 			</div>
+			<span class="photoCredit">Photo by <a href="{{data.gallery.quoteImage.photographer.website}}" title="{{data.gallery.quoteImage.photographer.name}}" target="_blank">{{data.gallery.quoteImage.photographer.name}}</a></span>
 		</div>
 
 		<div id="galleryInfo">

@@ -39,7 +39,6 @@ exports = module.exports = function (app) {
 	app.get('/our-process', routes.views.process);
 	app.get('/galleries', routes.views.galleries);
 	app.get('/galleries/:gallery', routes.views.gallery);
-	app.get('/flowers-101', routes.views.flowers);
 	app.get('/contact', routes.views.contact);
 	//TODO Implement the blog at a later time
 	//	app.get('/blog/:category?', routes.views.blog);
