@@ -9,7 +9,7 @@ exports = module.exports = function (req, res) {
 	// item in the header navigation.
 	locals.section = 'about';
 	// Set appropriate heading type to use appropriate styles
-	locals.headingType = 'image';
+	locals.headingType = 'dark';
 
 	// Render the view
 	view.render('about');

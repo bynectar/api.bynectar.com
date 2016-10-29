@@ -9,7 +9,7 @@ exports = module.exports = function (req, res) {
 	// item in the header navigation.
 	locals.section = 'process';
 	// Set appropriate heading type to use appropriate styles
-	locals.headingType = 'text';
+	locals.headingType = 'light';
 
 	// Render the view
 	view.render('process');

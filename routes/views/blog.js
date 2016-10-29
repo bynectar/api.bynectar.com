@@ -9,7 +9,7 @@ exports = module.exports = function (req, res) {
 	// Init locals
 	locals.section = 'blog';
 	// Set appropriate heading type to use appropriate styles
-	locals.headingType = 'text';
+	locals.headingType = 'light';
 	locals.filters = {
 		category: req.params.category,
 	};

@@ -8,7 +8,7 @@ exports = module.exports = function (req, res) {
 	// Set locals
 	locals.section = 'galleries';
 	// Set appropriate heading type to use appropriate styles
-	locals.headingType = 'text';
+	locals.headingType = 'light';
 
 	// Load the galleries by sortOrder
 	view.query('galleries', keystone.list('Gallery').model.find().sort('sortOrder').populate('thumbnail'));
