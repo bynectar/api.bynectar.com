@@ -326,5 +326,9 @@ module.exports = function () {
 		return obj._[underscoreMethod].format();
 	};
 
+	_helpers.url = function (url) {
+		return encodeURIComponent(url);
+	};
+
 	return _helpers;
 };

@@ -13,7 +13,15 @@
 		{{#if caption}}
 			<span class="thumbActions__action thumbActions__action--showCaption"><i class="fa fa-bars"></i></span>
 		{{/if}}
-		<span class="thumbActions__action"><i class="fa fa-pinterest"></i></span>
+		<span class="thumbActions__action">
+			<a href="https://www.pinterest.com/pin/create/button/"
+			data-pin-custom="true"
+			data-pin-media="{{src}}"
+			data-pin-url="http://www.bynectar.com"
+			data-pin-description="{{title}} – bynectar.com">
+				<i class="fa fa-pinterest"></i>
+			</a>
+		</span>
 
 		{{! If a website is provided, link to photographer's name }}
 		{{#if website}}
