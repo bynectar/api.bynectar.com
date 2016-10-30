@@ -9,7 +9,7 @@ exports = module.exports = function (req, res) {
 	// Set locals
 	locals.section = 'contact';
 	// Set appropriate heading type to use appropriate styles
-	locals.headingType = 'light';
+	locals.headingType = 'dark';
 
 	view.render('contact');
 };
