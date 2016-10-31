@@ -257,8 +257,16 @@
 	z-index 100
 	overflow hidden
 	background rgba(255,255,255,0.9)
+	.photoCredit
+		bottom -2.5rem
+		right 0
+		color dk-gray
+		a
+			color dk-gray
+			blackUnderline()
 	#galleryModal__slider
 		positionAll(2rem)
+		bottom 3.5rem
 		transition all ease-out .2s
 		#galleryModal__close
 			position absolute
@@ -291,7 +299,7 @@
 				a
 					font-family "Material Icons"
 					font-size 2rem
-					text-decoration none
+					background none
 					color dk-gray
 					&:hover
 						color amber

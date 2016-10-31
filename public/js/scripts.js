@@ -16,8 +16,10 @@ $(document).ready(function(){
 	$('[data-slide]').each(function(){
 		var div = document.createElement('DIV');
 		var bg = $(this).attr('data-slide');
+		var credit = $(this).closest('.thumbWrapper').find('.thumbActions__byline').html();
+		console.log(credit);
 		var css = 'url(' + bg + ')';
-		$(div).css('backgroundImage',css);
+		$(div).css('backgroundImage',css).html('<span class="photoCredit">'+credit+'</span>');
 		$('#galleryModal__slideContainer').append(div);
 		$(this).click(function(){
 			modalOpen();
@@ -68,11 +70,4 @@ $(document).ready(function(){
 		}
 	});
 
-	var nectarFeed = new Instafeed({
-		get: 'user',
-		userId: '194321043',
-		clientId: '1b46764a291c4f9c94d07878c23a00f2',
-		target: 'nectarFeed'
-	});
-	nectarFeed.run();
 });
