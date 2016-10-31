@@ -16,10 +16,10 @@ $(document).ready(function(){
 	$('[data-slide]').each(function(){
 		var div = document.createElement('DIV');
 		var bg = $(this).attr('data-slide');
-		var credit = $(this).closest('.thumbWrapper').find('.thumbActions__byline').html();
-		console.log(credit);
+		var actions = $(this).closest('.thumbWrapper').find('.thumbActions');
+		console.log(actions);
 		var css = 'url(' + bg + ')';
-		$(div).css('backgroundImage',css).html('<span class="photoCredit">'+credit+'</span>');
+		$(div).css('backgroundImage',css).html(actions);
 		$('#galleryModal__slideContainer').append(div);
 		$(this).click(function(){
 			modalOpen();
