@@ -36,7 +36,9 @@
 			</div>
 			<div id="galleryQuote__overlay">
 				<div id="galleryQuote__text">
-					<blockquote>{{data.gallery.quoteBody}}</blockquote>
+					{{#if data.gallery.quoteBody}}
+						<blockquote>{{data.gallery.quoteBody}}</blockquote>
+					{{/if}}
 					<p id="galleryQuote__byline">{{data.gallery.quoteByline}}</p>
 				</div>
 			</div>
