@@ -27,7 +27,7 @@ exports = module.exports = function (req, res) {
 		q.exec(function (err, result) {
 			locals.data.gallery = result;
 			locals.data.image = result.thumbnail.image.secure_url;
-			locals.data.title = result.title;
+			locals.data.title = result.title + " | Nectar Floral Design";
 			locals.data.pageDescription = result.blurb.body
 			next(err);
 		});

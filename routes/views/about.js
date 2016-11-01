@@ -15,7 +15,7 @@ exports = module.exports = function (req, res) {
 		currentUrl: req.originalUrl,
 		title: "Nectar Floral Design | Boston Wedding Florist",
 		pageDescription: "Nectar floral design is owned and operated by Misty Florez, serving the Boston area and beyond.",
-		image: "/images/home/summerstreetphotography-81.jpg"
+		image: "/images/about/2016-10-21_Bouquet-Setup-1.jpg"
 	};
 
 	// Render the view
