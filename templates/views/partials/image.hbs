@@ -7,9 +7,9 @@
 	{{/if}}
 
 	{{#if width}}
-		<img class="thumbImage" src="{{cloudinaryUrl image.image width=width height=height crop='fit' quality='70'}}" data-slide="{{image.image.secure_url}}">
+		<img class="thumbImage" src="{{cloudinaryUrl image.image width=width height=height crop='fit' quality='50'}}" data-slide="{{image.image.secure_url}}">
 	{{else}}
-		<img class="thumbImage" src="{{cloudinaryUrl image.image width='900' height='900' crop='fit' quality='70'}}" data-slide="{{image.image.secure_url}}">
+		<img class="thumbImage" src="{{cloudinaryUrl image.image width='900' height='900' crop='fit' quality='50'}}" data-slide="{{image.image.secure_url}}">
 	{{/if}}
 
 	{{! Link image if a key is provided }}
