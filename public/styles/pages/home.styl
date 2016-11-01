@@ -15,12 +15,12 @@
 	.homeBlock
 		flexContainer()
 		text-align center
-		&:nth-child(2n+2)
-			flex-direction row-reverse
 		.homeBlock__photo
-			flex 1
+			flexGrow(small,1)
 		.homeBlock__text
-			flex 1
+			padHeight(small,2rem,2rem)
+			flexGrow(small,2)
+			flexGrow(medium,1)
 			box-sizing border-box
 			.homeBlock__subtitle
 				surTitle()

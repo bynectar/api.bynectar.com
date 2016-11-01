@@ -62,7 +62,7 @@
 
 .thumbWrapper
 	aspect(small,2,3)
-	aspect(medium,5,6)
+	aspect(medium,4,5)
 	aspect(large,6,5)
 	width 100%
 	height 0
@@ -182,7 +182,8 @@
 	flexContainer()
 	box-sizing border-box
 	.galleryThumbnail__text
-		flex 1
+		flexGrow(small,2)
+		flexGrow(medium,1)
 		box-sizing border-box
 		text-align center
 		h4
@@ -194,7 +195,7 @@
 			padWidth(small,10%,10%)
 			padWidth(medium,20%,20%)
 	.galleryThumbnail__photo
-		flex 1
+		flexGrow(small,1)
 
 // Gallery View Styles
 #galleryGrid

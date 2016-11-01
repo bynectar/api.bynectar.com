@@ -85,6 +85,15 @@ thumbnailImage()
 	cursor pointer
 	transition opacity linear .2s
 
+// Flex
+flexDirection(breakpoint,direction)
+	@media (min-width: breakpoint)
+		flex-direction direction
+
+flexGrow(breakpoint,value)
+	@media (min-width: breakpoint)
+		flex value
+
 // Feature Blocks
 feature()
 	background-position center center
@@ -171,6 +180,7 @@ textHero()
 		align-items center
 		.heroText
 			flex 1
+			padding-top 3rem
 			.heroText__title
 				pageTitle()
 			.heroText__surTitle
@@ -187,6 +197,7 @@ imageHero()
 		color white
 		.heroText
 			flex 1
+			padding-top 3rem
 			.heroText__title
 				pageTitle()
 				color white
