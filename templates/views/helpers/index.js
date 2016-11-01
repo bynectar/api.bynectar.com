@@ -326,5 +326,16 @@ module.exports = function () {
 		return obj._[underscoreMethod].format();
 	};
 
+	// URL encoding helper
+	_helpers.url = function (url) {
+		return encodeURIComponent(url);
+	};
+
+	// Current Year Helper
+	_helpers.currentYear = function () {
+		var d = new Date();
+		return d.getFullYear();
+	};
+
 	return _helpers;
 };

@@ -1,0 +1,36 @@
+{{! Standard image block }}
+<div class="thumbWrapper">
+
+	{{! Use provided URL }}
+	<img class="thumbImage" src="{{src}}" data-slide="{{src}}">
+
+	<div class="thumbOverlay">
+		<div class="thumbText">
+			<p>{{caption}}</p>
+		</div>
+	</div>
+	<div class="thumbActions">
+		{{#if caption}}
+			<span class="thumbActions__action thumbActions__action--showCaption"><i class="fa fa-bars"></i></span>
+		{{/if}}
+		<span class="thumbActions__action">
+			<a href="https://www.pinterest.com/pin/create/button/"
+			data-pin-custom="true"
+			data-pin-media="{{src}}"
+			data-pin-url="http://www.bynectar.com"
+			data-pin-description="{{title}} – bynectar.com">
+				<i class="fa fa-pinterest"></i>
+			</a>
+		</span>
+
+		{{! If a website is provided, link to photographer's name }}
+		{{#if website}}
+			<span class="thumbActions__byline">Photo by <a href="{{website}}" title="{{photographer}}" target="_blank">{{photographer}}</a></span>
+		{{else}}
+			{{#if photographer}}
+				<span class="thumbActions__byline">Photo by {{photographer}}</span>
+			{{/if}}
+		{{/if}}
+
+	</div>
+</div>

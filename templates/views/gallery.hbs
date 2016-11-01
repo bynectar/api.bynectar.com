@@ -3,8 +3,8 @@
 	<section id="galleryHero">
 		<div class="heroBody">
 			<div class="heroText">
-				<h2 class="galleryHero__surTitle">{{data.gallery.subtitle}}</h2>
-				<h1 class="galleryHero__title">{{data.gallery.title}}</h1>
+				<h2 class="heroText__surTitle">{{data.gallery.subtitle}}</h2>
+				<h1 class="heroText__title">{{data.gallery.title}}</h1>
 			</div>
 		</div>
 	</section>
@@ -19,44 +19,30 @@
 				<p class="galleryThumbnail__blurb">{{{data.gallery.blurb.body}}}</p>
 			</div>
 			<div class="galleryThumbnail__photo">
-				<div class="thumbWrapper thumbHover" data-slide="{{data.gallery.thumbnail.image.url}}">
-					<img class="thumbImage" src="{{data.gallery.thumbnail.image.url}}">
-					<div class="thumbOverlay">
-						<div class="thumbText">
-							<p>{{data.gallery.thumbnail.caption}}</p>
-							<span class="thumbByline">Photo by <a href="{{data.gallery.thumbnail.photographer.website}}" title="{{data.gallery.thumbnail.photographer.name}}" target="_blank">{{data.gallery.thumbnail.photographer.name}}</a></span>
-						</div>
-					</div>
-				</div>
+				{{> image image=data.gallery.thumbnail width='2400' height='1800'}}
 			</div>
 		</div>
 
 		<div class="grid" id="galleryGrid">
 			{{#each data.gallery.gridImages}}
 			<div class="galleryGrid__item">
-				<div class="thumbWrapper thumbHover" data-slide="{{image.url}}">
-					<img class="thumbImage" src="{{image.url}}" alt="{{title}}">
-					<div class="thumbOverlay">
-						<div class="thumbText">
-							<p>{{caption}}</p>
-							<span class="thumbByline">Photo by <a href="{{photographer.website}}" title="{{photographer.name}}" target="_blank">{{photographer.name}}</a></span>
-						</div>
-					</div>
-				</div>
+				{{> image image=this}}
 			</div>
 			{{/each}}
 		</div>
 
 		<div id="galleryQuote">
-			<div id="galleryQuote__photo" data-slide="{{data.gallery.quoteImage.image.url}}" style="background-image:url({{data.gallery.quoteImage.image.url}})">
-				<div id="galleryQuote__photoCredit">Photo by <a href="{{data.gallery.quoteImage.photographer.website}}" title="{{data.gallery.quoteImage.photographer.name}}" target="_blank">{{data.gallery.quoteImage.photographer.name}}</a></div>
+			<div id="galleryQuote__photo" data-slide="{{data.gallery.quoteImage.image.secure_url}}" style="background-image:url({{data.gallery.quoteImage.image.secure_url}})">
 			</div>
 			<div id="galleryQuote__overlay">
 				<div id="galleryQuote__text">
-					<blockquote>{{data.gallery.quoteBody}}</blockquote>
+					{{#if data.gallery.quoteBody}}
+						<blockquote>{{data.gallery.quoteBody}}</blockquote>
+					{{/if}}
 					<p id="galleryQuote__byline">{{data.gallery.quoteByline}}</p>
 				</div>
 			</div>
+			<span class="photoCredit">Photo by <a href="{{data.gallery.quoteImage.photographer.website}}" title="{{data.gallery.quoteImage.photographer.name}}" target="_blank">{{data.gallery.quoteImage.photographer.name}}</a></span>
 		</div>
 
 		<div id="galleryInfo">

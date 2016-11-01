@@ -3,9 +3,9 @@ html
 	line-height 1.75
 	color dk-gray
 	@media (min-width: small)
-		font-size 12px
+		font-size 10px
 	@media (min-width: medium)
-		font-size 14px
+		font-size 12px
 	@media (min-width: large)
 		font-size 14px
 
@@ -26,7 +26,7 @@ pageTitle()
 
 surTitle()
 	font-family font-work
-	font-size 1rem
+	font-size .9rem
 	font-weight 400
 	text-transform uppercase
 	letter-spacing .1rem
@@ -66,7 +66,10 @@ h6
 
 a
 	color amber
-	cursor pointer
+	amberUnderline()
+
+a.cta
+	button()
 
 blockquote
 	font-size 3rem
@@ -76,3 +79,49 @@ blockquote
 		content "“"
 	&:after
 		content "”"
+
+// Photo Credit
+.photoCredit
+	position absolute
+	bottom .75rem
+	right 1rem
+	color white
+	a
+		color white
+		whiteUnderline()
+
+// Forms
+form
+
+	fieldset
+		border none
+		padding .5rem 0
+		margin .5rem 0
+		text-align left
+
+	label
+		box-sizing border-box
+		display block
+		width 100%
+		padding 0 .5rem
+		color dk-gray
+		&.inlineLabel
+			display inline
+
+	input
+		box-sizing border-box
+		width 100%
+		padding 0 .5rem
+		font-size 1rem
+		line-height 3rem
+		background lt-gray
+		border none
+		&[type="textarea"]
+			height 9rem
+		&[type="checkbox"]
+			display inline
+			width auto
+
+	button, input[type="submit"]
+		button()
+		margin-top 2rem

@@ -16,8 +16,9 @@ $(document).ready(function(){
 	$('[data-slide]').each(function(){
 		var div = document.createElement('DIV');
 		var bg = $(this).attr('data-slide');
+		$(this).closest('.thumbWrapper').find('.thumbActions').clone().prependTo(div);
 		var css = 'url(' + bg + ')';
-		$(div).css('backgroundImage',css);
+		$(div).css('backgroundImage',css);//.html(actions);
 		$('#galleryModal__slideContainer').append(div);
 		$(this).click(function(){
 			modalOpen();
@@ -37,6 +38,13 @@ $(document).ready(function(){
 			console.log('transition');
 		}
 	});
+
+	// Thumbnail caption overlay
+	$('.thumbWrapper .thumbActions__action--showCaption').hover(function(){
+		$(this).closest('.thumbWrapper').addClass('thumbWrapper--toggleOverlay');
+	},function(){
+		$(this).closest('.thumbWrapper').removeClass('thumbWrapper--toggleOverlay');
+	})
 
 	// Scroll Nav Class
 	$(window).scroll(function(){
@@ -60,4 +68,5 @@ $(document).ready(function(){
 			400: 1
 		}
 	});
+
 });

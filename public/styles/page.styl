@@ -21,5 +21,24 @@ section
 		clear both
 
 footer
-	background black
-	height 100px
+	flexContainer()
+	align-items stretch
+	padding 6rem 0
+	.footerColumn
+		padWidth(small,5%,5%)
+		flex 1
+		ul
+			list-style none
+			padding 0
+		.footerColumn__logo
+			font-family font-playfair
+			font-style italic
+			letter-spacing .25em
+			font-size 3rem
+			line-height 3.5rem
+			a
+				color dk-gray
+		p
+			color mid-gray
+		&:nth-child(3)
+			flex 2

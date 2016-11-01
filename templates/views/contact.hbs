@@ -1,44 +1,42 @@
-<div class="container">
-	<h1>Contact Us</h1>
-</div>
-<div class="container">
-	<div class="row">
-		<div class="col-sm-8 col-md-6">
-			{{#if enquirySubmitted}}
-			<h3>Thanks for getting in touch.</h3>
-			{{else}}
-			<form method="post">
-				<input type="hidden" name="action" value="contact">
-				<div class="form-group {{#if validationErrors.name}}has-error{{/if}}">
-					<label>Name</label>
-					<input type="text" name="name.full"  class="form-control" value="{{formData.[name.full]}}">
-				</div>
-				<div class="form-group {{#if validationErrors.email}}has-error{{/if}}">
-					<label>Email</label>
-					<input type="email" name="email" class="form-control" value="{{formData.email}}">
-				</div>
-				<div class="form-group">
-					<label>Phone</label>
-					<input type="text" name="phone" placeholder="(optional)" class="form-control" value="{{formData.phone}}">
-				</div>
-				<div class="form-group {{#if validationErrors.enquiryType}}has-error{{/if}}">
-					<label>What are you contacting us about?</label>
-					<select name="enquiryType" class="form-control">
-						<option value="">(select one)</option>
-						{{#each enquiryTypes}}
-						<option value="{{value}}">{{label}}</option>
-						{{/each}}
-					</select>
-				</div>
-				<div class="form-group {{#if validationErrors.message}}has-error{{/if}} ">
-					<label>Message</label>
-					<textarea name="message" placeholder="Leave us a message..." rows="4" class="form-control">{{formData.message}}</textarea>
-				</div>
-				<div class="form-actions">
-					<button type="submit" class="btn btn-primary">Send</button>
-				</div>
-			</form>
-			{{/if}}
+{{> head}}
+{{> header}}
+
+<section id="contactHero" style="background-image:url(/images/contact/2016-10-25_Dahlia-Wall-1.jpg);">
+	<div class="heroBody">
+		<div class="heroText">
+			<h1 class="heroText__surTitle">Contact Us</h1>
+			<h2 class="heroText__title">We love talking about this stuff</h2>
 		</div>
 	</div>
-</div>
+</section>
+
+<section id="contactBody">
+	<div class="contactColumn">
+		<h3>Getting Married?</h3>
+		<p>Tell us about your wedding plans and we'll get in touch with you to set up our first phone call (Find out more about <a href="/our-process/">our process</a>).</p>
+		{{> contactForm}}
+	</div>
+
+	<div class="contactColumn">
+		<div class="contactColumn__group">
+			<h3>Social</h3>
+			<p><a href="http://www.instagram.com/bynectar" target="_blank"><i class="fa fa-instagram"></i> Instagram</a></p>
+			<p><a href="http://www.facebook.com/bynectar" target="_blank"><i class="fa fa-facebook"></i> Facebook</a></p>
+		</div>
+		<div class="contactColumn__group">
+			<h3>Phone</h3>
+			<p>(617) 595-5741</p>
+		</div>
+		<div class="contactColumn__group">
+			<h3>Email</h3>
+			<p>misty(at)bynectar.com</p>
+		</div>
+		<div class="contactColumn__group">
+			<h3>Studio &amp; Garden</h3>
+			<p>By appointment only</p>
+			<p>Woburn, MA</p>
+		</div>
+	</div>
+</section>
+
+{{> footer}}

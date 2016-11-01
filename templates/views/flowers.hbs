@@ -1,0 +1,42 @@
+{{> head}}
+{{> header}}
+
+	<section id="galleriesHero">
+		<div class="heroBody">
+			<div class="heroText">
+				<h1 class="galleryHero__surTitle">Photo Galleries</h1>
+				<h2 class="galleryHero__title">Meet Our Couples</h2>
+			</div>
+		</div>
+	</section>
+
+	<section id="galleryBody">
+
+	<!-- if galleries -->
+	{{#if galleries}}
+		{{#each galleries}}
+		<!-- Gallery Thumbnail -->
+		<div class="galleryThumbnail">
+			<div class="galleryThumbnail__text">
+				<h4 class="galleryThumbnail__location">{{subtitle}}</h4>
+				<h3 class="galleryThumbnail__title">{{title}}</h3>
+				<p class="galleryThumbnail__blurb">{{{blurb.body}}}</p>
+				<a href="/galleries/{{key}}" class="galleryThumbnail__cta">View Gallery</a>
+			</div>
+			<div class="galleryThumbnail__photo">
+				<div class="thumbnailWrapper">
+					<a href="/galleries/{{key}}" title="{{title}}">
+						<div class="galleryThumbnail__image thumbnailImage" style="background-image:url({{cloudinaryUrl thumbnail.image width='1100' height='900' crop='fill'}})"></div>
+					</a>
+					<div class="thumbnailPhotoCredit">Photo by <a href="http://www.photographer-website.com" title="Photographer's Name" target="_blank">Photographer's Name</a></div>
+				</div>
+			</div>
+		</div>
+		{{/each}}
+	{{else}}
+	<!-- else -->
+	<h3 class="text-muted">There are no image galleries yet.</h3>
+	{{/if}}
+</div>
+
+{{> footer}}

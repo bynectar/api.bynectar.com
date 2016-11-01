@@ -8,12 +8,18 @@ exports = module.exports = function (req, res) {
 
 	// Init locals
 	locals.section = 'blog';
+	// Set appropriate heading type to use appropriate styles
+	locals.headingType = 'light';
 	locals.filters = {
 		category: req.params.category,
 	};
 	locals.data = {
 		posts: [],
 		categories: [],
+		currentUrl: req.originalUrl,
+		title: "Nectar Floral Design | Boston Wedding Florist",
+		pageDescription: "Nectar floral design is owned and operated by Misty Florez, serving the Boston area and beyond.",
+		image: "/images/home/summerstreetphotography-81.jpg"
 	};
 
 	// Load all categories

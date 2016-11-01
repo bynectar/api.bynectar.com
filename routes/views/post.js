@@ -7,6 +7,8 @@ exports = module.exports = function (req, res) {
 
 	// Set locals
 	locals.section = 'blog';
+	// Set appropriate heading type to use appropriate styles
+	locals.headingType = 'light';
 	locals.filters = {
 		post: req.params.post,
 	};

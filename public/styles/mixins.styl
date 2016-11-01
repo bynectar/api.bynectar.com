@@ -85,6 +85,15 @@ thumbnailImage()
 	cursor pointer
 	transition opacity linear .2s
 
+// Flex
+flexDirection(breakpoint,direction)
+	@media (min-width: breakpoint)
+		flex-direction direction
+
+flexGrow(breakpoint,value)
+	@media (min-width: breakpoint)
+		flex value
+
 // Feature Blocks
 feature()
 	background-position center center
@@ -95,6 +104,37 @@ featureViewport()
 	height 100%
 
 // Buttons
+button()
+	display inline-block
+	border lt-gray solid 1px
+	padding .5rem 1rem
+	border-radius 2px
+	text-decoration none
+	font-family font-work
+	font-size 1rem
+	color dk-gray
+	background white
+	transition all linear .2s
+	&:hover
+		border-color mid-gray
+
+blackUnderline()
+	background-image linear-gradient(to bottom,rgba(68,68,68,.6) 50%,rgba(68,68,68,0) 50%)
+	background-size 2px .2em
+	background-position 0 1.07em
+	background-repeat repeat-x
+	text-decoration none
+	&:hover
+		background-size 2px .3em
+
+whiteUnderline()
+	blackUnderline()
+	background-image linear-gradient(to bottom,rgba(255,255,255,.6) 50%,rgba(255,255,255,0) 50%)
+
+amberUnderline()
+	blackUnderline()
+	background-image linear-gradient(to bottom,rgba(255,255,255,.6) 50%,rgba(247,148,30,0) 50%)
+
 .button-radius( tl = 4px, tr = 4px, br = 4px, bl = 4px )
 	-webkit-border-top-left-radius = tl
 	-webkit-border-top-right-radius = tr
@@ -140,9 +180,10 @@ textHero()
 		align-items center
 		.heroText
 			flex 1
-			.galleryHero__title
+			padding-top 3rem
+			.heroText__title
 				pageTitle()
-			.galleryHero__surTitle
+			.heroText__surTitle
 				surTitle()
 
 imageHero()
@@ -153,9 +194,13 @@ imageHero()
 		positionFull()
 		display flex
 		align-items center
+		color white
 		.heroText
 			flex 1
-			.galleryHero__title
+			padding-top 3rem
+			.heroText__title
 				pageTitle()
-			.galleryHero__surTitle
+				color white
+			.heroText__surTitle
 				surTitle()
+				color white

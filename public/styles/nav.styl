@@ -9,13 +9,16 @@
 	z-index header-z
 	transition background linear .2s
 
-	#header__logo
-		img
-			position absolute
-			top 15px
-			left 10px
-			width auto
-			height 70px
+	#headerLogo
+		position absolute
+		top 15px
+		left 10px
+		width 105px
+		height 70px
+		background-image url(/images/nectar-logo.png)
+		background-size 105px 140px
+		background-position 0 0
+		background-repeat no-repeat
 
 	#header__nav--desktop
 		font-size 1rem
@@ -37,7 +40,7 @@
 				font-weight 400
 				a
 					margin 0 .5rem
-					text-decoration none
+					background none
 					text-transform none
 					transition color linear .1s
 					border none
@@ -46,7 +49,7 @@
 						color amber
 
 			#nav__name
-				letter-spacing .5rem
+				letter-spacing .25em
 				font-size 1.25rem
 				font-family font-playfair
 				font-style italic
@@ -56,11 +59,20 @@
 				margin 0 1rem
 				color mid-gray
 
-body.page--imageFeature
-	#header #header__nav--desktop
-		color white
+body.heading-dark
+	#header
+		#headerLogo
+			background-position 0 -70px
+		#header__nav--desktop
+			color white
+			#nav__pipe
+				color white
 
 html.scroll #header
 	background rgba(255,255,255,.9)
+	#headerLogo
+		background-position 0 0
 	#header__nav--desktop
 		color dk-gray
+		#nav__pipe
+			color dk-gray

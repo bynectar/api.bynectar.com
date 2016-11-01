@@ -2,79 +2,49 @@
 {{> head}}
 {{> header}}
 
-	<section id="processHero">
+	<section id="homeHero" style="background-image:url(/images/home/summerstreetphotography-81.jpg);">
 		<div class="heroBody">
 			<div class="heroText">
-				<h1 class="galleryHero__surTitle">Our Process</h1>
-				<h2 class="galleryHero__title">How We Do What We (Love To) Do</h2>
+				<!--<img src="/images/nectar-wordmark.png" width="600" height="111" alt="nectar" />-->
+				<h2 class="heroText__title">It takes love.</h2>
 			</div>
+			<span class="photoCredit">Photo by <a href="http://summerstreetphotography.com/" target="_blank">Summer Street Photography</a></span>
 		</div>
 	</section>
 
-	<section id="processBody">
+	<section id="homeBody">
 
-		<!-- Process Step 1 -->
-		<div class="processStep">
-			<div class="processStep__text">
-				<h4 class="processStep__number">Step 1</h4>
-				<h3 class="processStep__title">Getting to Know You</h3>
-				<p class="processStep__blurb">Congratulations! You’re getting married and you’re talking to us about your flowers. Our first step is an introductory phone call. We’ll talk about your wedding plans, how the two of you met, how he popped the question. Afterward we’ll send you a questionnaire to get some more detail about your event, but on this call we just want to get to know you better.</p>
+		<!-- if galleries -->
+		{{#if data.gallery}}
+			{{#each data.gallery}}
+			<!-- Gallery Thumbnail -->
+			<div class="galleriesThumbnail">
+				<div class="galleriesThumbnail__text">
+					<h4 class="galleriesThumbnail__location">From our Galleries</h4>
+					<h3 class="galleriesThumbnail__title">{{title}}</h3>
+					{{!<p class="galleriesThumbnail__blurb">{{{blurb.body\}\}\}</p>}}
+					<a href="/galleries/{{key}}" class="galleriesThumbnail__cta">View Gallery</a>
+				</div>
+				<div class="galleriesThumbnail__photo">
+					{{> image image=thumbnail key=key}}
+				</div>
 			</div>
-			<div class="processStep__photo">
-				<div class="processStep__image" style="background-image:url({{assets}}/images/gallery/eunice-kyle/eunice-kyle_1059.jpg)"></div>
-				<div class="imageCaption">Photo by <a href="#" title="John the Designer" target="_blank">John the Designer</a></div>
-			</div>
-		</div>
+			{{/each}}
+		{{/if}}
 
-		<!-- Process Step 2 -->
-		<div class="processStep">
-			<div class="processStep__text">
-				<h4 class="processStep__number">Step 2</h4>
-				<h3 class="processStep__title">Real Talk</h3>
-				<p class="processStep__blurb">Ok, this is where things get fun. We’ll meet at the Nectar studio and start imagining the possibilities. We’ll have style boards, you’ll have Pinterest boards, we’ll talk about colors, blooms and decor. By the time you leave you’ll have a first draft of our proposal to take home with you.</p>
+		<!-- About Block 1 -->
+		<div class="homeBlock">
+			<div class="homeBlock__text">
+				<h4 class="homeBlock__subtitle">Our Process</h4>
+				<h3 class="homeBlock__title">How we do it.</h3>
+				<p class="homeBlock__blurb">Congratulations! You’re getting married and you’re talking to us about your flowers. Our first step is an introductory phone call. We’ll talk about your wedding plans, how the two of you met, how he popped the question. Afterward we’ll send you a questionnaire to get some more detail about your event, but on this call we just want to get to know you better.</p>
+				<a href="/our-process/" class="cta">Find out more</a>
 			</div>
-			<div class="processStep__photo">
-				<div class="processStep__image" style="background-image:url({{assets}}/images/gallery/eunice-kyle/eunice-kyle_1059.jpg)"></div>
-				<div class="imageCaption">Photo by <a href="#" title="John the Designer" target="_blank">John the Designer</a></div>
-			</div>
-		</div>
-
-		<!-- Process Step 3 -->
-		<div class="processStep">
-			<div class="processStep__text">
-				<h4 class="processStep__number">Step 3</h4>
-				<h3 class="processStep__title">The Vision</h3>
-				<p class="processStep__blurb">Time for the deets! We put a lot of thought into our proposals. By now we’ve spoken to your other vendors, we’ve visited the venue, we’ve incorporated those details into our proposal, and it shows. We’ll use everything we’ve learned to tailor our proposal to you and your event.</p>
-			</div>
-			<div class="processStep__photo">
-				<div class="processStep__image" style="background-image:url({{assets}}/images/gallery/eunice-kyle/eunice-kyle_1059.jpg)"></div>
-				<div class="imageCaption">Photo by <a href="#" title="John the Designer" target="_blank">John the Designer</a></div>
-			</div>
-		</div>
-
-		<!-- Process Step 4 -->
-		<div class="processStep">
-			<div class="processStep__text">
-				<h4 class="processStep__number">Step 4</h4>
-				<h3 class="processStep__title">The Final Countdown!</h3>
-				<p class="processStep__blurb">Time flies! You’ve been busy going to fittings and finalizing your guest list, and we’ve been coordinating with your vendors and ordering flowers. It’s all coming together and we’ll get in touch to confirm your details, look over seating plans and discuss any changes as the wedding day approaches. The balance of your payment will be due one month out.</p>
-			</div>
-			<div class="processStep__photo">
-				<div class="processStep__image" style="background-image:url({{assets}}/images/gallery/eunice-kyle/eunice-kyle_1059.jpg)"></div>
-				<div class="imageCaption">Photo by <a href="#" title="John the Designer" target="_blank">John the Designer</a></div>
-			</div>
-		</div>
-
-		<!-- Process Step 5 -->
-		<div class="processStep">
-			<div class="processStep__text">
-				<h4 class="processStep__number">Step 5</h4>
-				<h3 class="processStep__title">The Big Day</h3>
-				<p class="processStep__blurb">Before sunrise we’re prepping flowers, designing and packing up. We’ll get to the venue early and start setting up your reception area, putting on boutonnieres and talking to your photographer, coordinator and others. When the music dies down and you retreat to your room with a glass of champagne we’ll start disassembling arbors, packing away centerpieces and</p>
-			</div>
-			<div class="processStep__photo">
-				<div class="processStep__image" style="background-image:url({{assets}}/images/gallery/eunice-kyle/eunice-kyle_1059.jpg)"></div>
-				<div class="imageCaption">Photo by <a href="#" title="John the Designer" target="_blank">John the Designer</a></div>
+			<div class="homeBlock__photo">
+				{{> imageCustom
+					title='placeholder image'
+					src='/images/process/2016-10-08_Misty-Centerpiece-1.jpg'
+				}}
 			</div>
 		</div>
 

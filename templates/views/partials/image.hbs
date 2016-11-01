@@ -1,0 +1,49 @@
+{{! Standard image block }}
+<div class="thumbWrapper">
+
+	{{! Link image if a key is provided }}
+	{{#if key}}
+		<a href="/galleries/{{key}}">
+	{{/if}}
+
+	{{#if width}}
+		<img class="thumbImage" src="{{cloudinaryUrl image.image width=width height=height crop='fit'}}" data-slide="{{image.image.secure_url}}">
+	{{else}}
+		<img class="thumbImage" src="{{cloudinaryUrl image.image width='900' height='900' crop='fit'}}" data-slide="{{image.image.secure_url}}">
+	{{/if}}
+
+	{{! Link image if a key is provided }}
+	{{#if key}}
+		</a>
+	{{/if}}
+
+	<div class="thumbOverlay">
+		<div class="thumbText">
+			<p>{{image.caption}}</p>
+		</div>
+	</div>
+	<div class="thumbActions">
+		{{#if image.caption}}
+			<span class="thumbActions__action thumbActions__action--showCaption"><i class="fa fa-bars"></i></span>
+		{{/if}}
+		<span class="thumbActions__action">
+			<a href="https://www.pinterest.com/pin/create/button/"
+			data-pin-custom="true"
+			data-pin-media="{{image.image.secure_url}}"
+			data-pin-url="http://www.bynectar.com"
+			data-pin-description="{{image.title}} – bynectar.com">
+				<i class="fa fa-pinterest"></i>
+			</a>
+		</span>
+
+		{{! If a website is provided, link to photographer's name }}
+		{{#if image.photographer.website}}
+			<span class="thumbActions__byline">Photo by <a href="{{image.photographer.website}}" title="{{image.photographer.name}}" target="_blank">{{image.photographer.name}}</a></span>
+		{{else}}
+			{{#if image.photographer.name}}
+				<span class="thumbActions__byline">Photo by {{image.photographer.name}}</span>
+			{{/if}}
+		{{/if}}
+
+	</div>
+</div>

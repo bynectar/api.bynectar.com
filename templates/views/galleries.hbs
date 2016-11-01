@@ -4,8 +4,8 @@
 	<section id="galleriesHero">
 		<div class="heroBody">
 			<div class="heroText">
-				<h1 class="galleryHero__surTitle">Photo Galleries</h1>
-				<h2 class="galleryHero__title">Meet Our Couples</h2>
+				<h1 class="heroText__surTitle">Photo Galleries</h1>
+				<h2 class="heroText__title">Meet Our Couples</h2>
 			</div>
 		</div>
 	</section>
@@ -16,20 +16,17 @@
 	{{#if galleries}}
 		{{#each galleries}}
 		<!-- Gallery Thumbnail -->
-		<div class="galleryThumbnail">
-			<div class="galleryThumbnail__text">
-				<h4 class="galleryThumbnail__location">{{subtitle}}</h4>
-				<h3 class="galleryThumbnail__title">{{title}}</h3>
-				<p class="galleryThumbnail__blurb">{{{blurb.body}}}</p>
-				<a href="/galleries/{{key}}" class="galleryThumbnail__cta">View Gallery</a>
+		<div class="galleriesThumbnail">
+			<div class="galleriesThumbnail__text">
+				<h3 class="galleriesThumbnail__title">{{title}}</h3>
+				<h4 class="galleriesThumbnail__location">{{subtitle}}</h4>
+				{{!<p class="galleriesThumbnail__blurb">{{{blurb.body\}\}\}</p>}}
+				<a href="/galleries/{{key}}" class="galleriesThumbnail__cta">View Gallery</a>
 			</div>
-			<div class="galleryThumbnail__photo">
-				<div class="thumbnailWrapper">
-					<a href="/galleries/{{key}}" title="{{title}}">
-						<div class="galleryThumbnail__image thumbnailImage" style="background-image:url({{cloudinaryUrl thumbnail width='680' height='680'}})"></div>
-					</a>
-					<div class="thumbnailPhotoCredit">Photo by <a href="http://www.photographer-website.com" title="Photographer's Name" target="_blank">Photographer's Name</a></div>
-				</div>
+			<div class="galleriesThumbnail__photo">
+				<a href="/galleries/{{key}}" title="{{title}}">
+					{{> image image=this.thumbnail key=key}}
+				</a>
 			</div>
 		</div>
 		{{/each}}
@@ -37,6 +34,7 @@
 	<!-- else -->
 	<h3 class="text-muted">There are no image galleries yet.</h3>
 	{{/if}}
-</div>
+
+	</section>
 
 {{> footer}}

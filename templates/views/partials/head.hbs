@@ -6,15 +6,20 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>{{title}}</title>
-	<meta name="description" content="">
+	<title>{{data.title}}</title>
+	<meta name="description" content="{{data.pageDescription}}">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta property="og:url" content="{{data.currentUrl}}">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="{{data.title}}">
+	<meta property="og:image" content="{{data.image}}">
+	<meta property="og:description" content="{{data.pageDescription}}">
+	<meta property="og:site_name" content="Nectar Floral Design">
 
 	{{!-- Place favicon.ico and apple-touch-icon.png in the root directory --}}
 
 {{!-- Styles --}}
-	<script src="//use.typekit.net/ljs2rqe.js"></script>
-	<script>try{Typekit.load();}catch(e){}</script>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i|Cabin:400,400i,700,700i" type="text/css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -29,7 +34,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 
 </head>
-<body class="{{bodyClass}}">
+<body class="heading-{{headingType}}">
 	<!--
 		Flash messages allow you to display once-off status messages to users, e.g. form
 		validation errors, success messages, etc
