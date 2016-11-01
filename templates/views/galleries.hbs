@@ -16,14 +16,14 @@
 	{{#if galleries}}
 		{{#each galleries}}
 		<!-- Gallery Thumbnail -->
-		<div class="galleryThumbnail">
-			<div class="galleryThumbnail__text">
-				<h3 class="galleryThumbnail__title">{{title}}</h3>
-				<h4 class="galleryThumbnail__location">{{subtitle}}</h4>
-				<p class="galleryThumbnail__blurb">{{{blurb.body}}}</p>
-				<a href="/galleries/{{key}}" class="galleryThumbnail__cta">View Gallery</a>
+		<div class="galleriesThumbnail">
+			<div class="galleriesThumbnail__text">
+				<h3 class="galleriesThumbnail__title">{{title}}</h3>
+				<h4 class="galleriesThumbnail__location">{{subtitle}}</h4>
+				{{!<p class="galleriesThumbnail__blurb">{{{blurb.body\}\}\}</p>}}
+				<a href="/galleries/{{key}}" class="galleriesThumbnail__cta">View Gallery</a>
 			</div>
-			<div class="galleryThumbnail__photo">
+			<div class="galleriesThumbnail__photo">
 				<a href="/galleries/{{key}}" title="{{title}}">
 					{{> image image=this.thumbnail key=key}}
 				</a>

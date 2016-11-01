@@ -178,10 +178,30 @@
 	padding .25rem
 	box-sizing border-box
 
+.galleriesThumbnail
+	flexContainer()
+	box-sizing border-box
+	.galleriesThumbnail__text
+		flexGrow(small,2)
+		flexGrow(medium,1)
+		box-sizing border-box
+		text-align center
+		h4
+			surTitle()
+		.galleriesThumbnail__cta
+			button()
+			margin-top 2rem
+		& > *
+			padWidth(small,10%,10%)
+			padWidth(medium,20%,20%)
+	.galleriesThumbnail__photo
+		flexGrow(small,1)
+
 .galleryThumbnail
 	flexContainer()
 	box-sizing border-box
 	.galleryThumbnail__text
+		display none
 		flexGrow(small,2)
 		flexGrow(medium,1)
 		box-sizing border-box
@@ -196,6 +216,10 @@
 			padWidth(medium,20%,20%)
 	.galleryThumbnail__photo
 		flexGrow(small,1)
+		.thumbWrapper
+			aspect(small,3,2)
+			aspect(medium,2,1)
+			aspect(large,2,1)
 
 // Gallery View Styles
 #galleryGrid

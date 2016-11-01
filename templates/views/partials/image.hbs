@@ -6,7 +6,11 @@
 		<a href="/galleries/{{key}}">
 	{{/if}}
 
+	{{#if width}}
+		<img class="thumbImage" src="{{cloudinaryUrl image.image width=width height=height crop='fit'}}" data-slide="{{image.image.secure_url}}">
+	{{else}}
 		<img class="thumbImage" src="{{cloudinaryUrl image.image width='900' height='900' crop='fit'}}" data-slide="{{image.image.secure_url}}">
+	{{/if}}
 
 	{{! Link image if a key is provided }}
 	{{#if key}}
