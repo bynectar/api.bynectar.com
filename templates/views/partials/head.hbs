@@ -6,9 +6,16 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>{{title}}</title>
-	<meta name="description" content="">
+	<title>{{data.title}}</title>
+	<meta name="description" content="{{data.pageDescription}}">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta property="og:url" content="{{data.currentUrl}}">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="{{data.title}}">
+	<meta property="og:image" content="{{data.image}}">
+	<meta property="og:description" content="{{data.pageDescription}}">
+	<meta property="og:site_name" content="Nectar Floral Design">
 
 	{{!-- Place favicon.ico and apple-touch-icon.png in the root directory --}}
 
