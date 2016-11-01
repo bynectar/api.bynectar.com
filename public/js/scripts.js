@@ -16,10 +16,9 @@ $(document).ready(function(){
 	$('[data-slide]').each(function(){
 		var div = document.createElement('DIV');
 		var bg = $(this).attr('data-slide');
-		var actions = $(this).closest('.thumbWrapper').find('.thumbActions');
-		console.log(actions);
+		$(this).closest('.thumbWrapper').find('.thumbActions').clone().prependTo(div);
 		var css = 'url(' + bg + ')';
-		$(div).css('backgroundImage',css).html(actions);
+		$(div).css('backgroundImage',css);//.html(actions);
 		$('#galleryModal__slideContainer').append(div);
 		$(this).click(function(){
 			modalOpen();

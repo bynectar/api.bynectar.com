@@ -3,7 +3,7 @@
 
 	{{! Link image if a key is provided }}
 	{{#if key}}
-	<a href="/galleries/{{key}}">
+		<a href="/galleries/{{key}}">
 	{{/if}}
 
 		<img class="thumbImage" src="{{cloudinaryUrl image.image width='900' height='900' crop='fit'}}" data-slide="{{image.image.secure_url}}">
