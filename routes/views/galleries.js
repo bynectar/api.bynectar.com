@@ -18,7 +18,7 @@ exports = module.exports = function (req, res) {
 	};
 
 	// Load the galleries by sortOrder
-	view.query('galleries', keystone.list('Gallery').model.find().sort('sortOrder').populate('thumbnail'));
+	view.query('galleries', keystone.list('Gallery').model.find().where('state', 'published').sort('-publishedDate').populate('thumbnail'));
 
 	// Render the view
 	view.render('galleries');
