@@ -18,6 +18,7 @@ Gallery.add({
 		value: ''
 	},
 	publishedDate: { type: Types.Datetime, default: Date.now },
+	state: { type: Types.Select, options: 'draft, published, archived', default: 'draft', index: true },
 	subtitle: { type: Types.Text, required: true, default: 'Subtitle' },
 	thumbnail: { type: Types.Relationship, ref: 'Photo' },
 	blurb: {
@@ -31,5 +32,7 @@ Gallery.add({
 	quoteImage: { type: Types.Relationship, ref: 'Photo' },
 	vendors: { type: Types.Relationship, ref: 'Vendor', many: true }
 });
+
+Gallery.relationship({ path: 'photos', ref: 'Photo', refPath: 'gallery' });
 
 Gallery.register();

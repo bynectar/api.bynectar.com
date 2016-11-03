@@ -19,7 +19,8 @@ Photo.add({
 	photographer: {
 		name: { type: Types.Text },
 		website: { type: Types.Url },
-	}
+	},
+	gallery: { type: Types.Relationship, ref: 'Gallery' }
 });
 
 Photo.register();

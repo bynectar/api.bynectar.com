@@ -22,7 +22,7 @@ exports = module.exports = function (req, res) {
 	// Load the current gallery
 	view.on('init', function (next) {
 
-		var q = keystone.list('Gallery').model.find().limit(1).populate('thumbnail gridImages vendors quoteImage');
+		var q = keystone.list('Gallery').model.find().where('state', 'published').limit(1).populate('thumbnail gridImages vendors quoteImage').sort('-publishedDate');
 
 		q.exec(function (err, result) {
 			locals.data.gallery = result;
