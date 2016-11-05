@@ -16,10 +16,6 @@ Photo.add({
 	publishedDate: { type: Types.Datetime, default: Date.now },
 	image: { type: Types.CloudinaryImage },
 	caption: { type: Types.Text, initial: true },
-	photographer: {
-		name: { type: Types.Text },
-		website: { type: Types.Url },
-	},
 	photoCredit: { type: Types.Relationship, ref: 'Vendor', filters: { type: 'photographer' } },
 	gallery: { type: Types.Relationship, ref: 'Gallery' },
 	photoType: {

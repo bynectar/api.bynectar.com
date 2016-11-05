@@ -20,16 +20,13 @@ Gallery.add({
 	publishedDate: { type: Types.Datetime, default: Date.now },
 	state: { type: Types.Select, options: 'draft, published, archived', default: 'draft', index: true },
 	subtitle: { type: Types.Text, required: true, default: 'Subtitle' },
-	thumbnail: { type: Types.Relationship, ref: 'Photo' },
 	blurb: {
 		title: { type: Types.Text },
 		subtitle: { type: Types.Text },
 		body: { type: Types.Html, wysiwyg: true }
 	},
-	gridImages: { type: Types.Relationship, ref: 'Photo', many: true },
 	quoteBody: { type: Types.Text },
 	quoteByline: { type: Types.Text },
-	quoteImage: { type: Types.Relationship, ref: 'Photo' },
 	vendors: { type: Types.Relationship, ref: 'Vendor', many: true }
 });
 
