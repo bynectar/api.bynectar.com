@@ -37,11 +37,11 @@
 		</span>
 
 		{{! If a website is provided, link to photographer's name }}
-		{{#if image.photographer.website}}
-			<span class="thumbActions__byline">Photo by <a href="{{image.photographer.website}}" title="{{image.photographer.name}}" target="_blank">{{image.photographer.name}}</a></span>
+		{{#if image.photoCredit.website}}
+			<span class="thumbActions__byline">Photo by <a href="{{image.photoCredit.website}}" title="{{image.photoCredit.name}}" target="_blank">{{image.photoCredit.name}}</a></span>
 		{{else}}
-			{{#if image.photographer.name}}
-				<span class="thumbActions__byline">Photo by {{image.photographer.name}}</span>
+			{{#if image.photoCredit.name}}
+				<span class="thumbActions__byline">Photo by {{image.photoCredit.name}}</span>
 			{{/if}}
 		{{/if}}
 

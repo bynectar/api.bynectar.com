@@ -4,6 +4,7 @@
 	<section id="galleriesHero">
 		<div class="heroBody">
 			<div class="heroText">
+				<p>{{data.tester}}</p>
 				<h1 class="heroText__surTitle">Photo Galleries</h1>
 				<h2 class="heroText__title">Meet Our Couples</h2>
 			</div>
@@ -25,7 +26,7 @@
 			</div>
 			<div class="galleriesThumbnail__photo">
 				<a href="/galleries/{{key}}" title="{{title}}">
-					{{> image image=this.thumbnail key=key width=1200 height=800}}
+					{{> image image=this.thumbnailPhoto key=key width=1200 height=800}}
 				</a>
 			</div>
 		</div>

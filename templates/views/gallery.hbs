@@ -19,12 +19,12 @@
 				<p class="galleryThumbnail__blurb">{{{data.gallery.blurb.body}}}</p>
 			</div>
 			<div class="galleryThumbnail__photo">
-				{{> image image=data.gallery.thumbnail width='2400' height='1800'}}
+				{{> image image=data.thumbnailPhoto width='2400' height='1800'}}
 			</div>
 		</div>
 
 		<div class="grid" id="galleryGrid">
-			{{#each data.gallery.gridImages}}
+			{{#each data.gridPhotos}}
 			<div class="galleryGrid__item">
 				{{> image image=this}}
 			</div>
@@ -32,7 +32,7 @@
 		</div>
 
 		<div id="galleryQuote">
-			<div id="galleryQuote__photo" data-slide="{{data.gallery.quoteImage.image.secure_url}}" style="background-image:url({{data.gallery.quoteImage.image.secure_url}})">
+			<div id="galleryQuote__photo" data-slide="{{data.quotePhoto.image.secure_url}}" style="background-image:url({{data.quotePhoto.image.secure_url}})">
 			</div>
 			<div id="galleryQuote__overlay">
 				<div id="galleryQuote__text">
@@ -42,7 +42,7 @@
 					<p id="galleryQuote__byline">{{data.gallery.quoteByline}}</p>
 				</div>
 			</div>
-			<span class="photoCredit">Photo by <a href="{{data.gallery.quoteImage.photographer.website}}" title="{{data.gallery.quoteImage.photographer.name}}" target="_blank">{{data.gallery.quoteImage.photographer.name}}</a></span>
+			<span class="photoCredit">Photo by <a href="{{data.quotePhoto.photoCredit.website}}" title="{{data.quotePhoto.photoCredit.name}}" target="_blank">{{data.quotePhoto.photoCredit.name}}</a></span>
 		</div>
 
 		<div id="galleryInfo">

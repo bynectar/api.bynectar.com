@@ -22,11 +22,16 @@ exports = module.exports = function (req, res) {
 	// Load the current gallery
 	view.on('init', function (next) {
 
-		var q = keystone.list('Gallery').model.find().where('state', 'published').limit(1).populate('thumbnail gridImages vendors quoteImage').sort('-publishedDate');
+		var q = keystone.list('Gallery').model.findOne().where('state', 'published').sort('-publishedDate');
 
 		q.exec(function (err, result) {
 			locals.data.gallery = result;
-			next(err);
+		})
+		.then(function(gallery){
+			keystone.list( 'Photo' ).model.findOne().where( { gallery: gallery.id, photoType: 'thumbnail' } ).populate( 'photoCredit' ).exec( function ( err, result ) {
+				locals.data.gallery.thumbnailPhoto = result;
+				next(err);
+			});
 		});
 
 	});

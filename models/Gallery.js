@@ -35,4 +35,6 @@ Gallery.add({
 
 Gallery.relationship({ path: 'photos', ref: 'Photo', refPath: 'gallery' });
 
+Gallery.defaultColumns = 'title, state|20%, publishedDate|20%';
+
 Gallery.register();

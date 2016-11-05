@@ -29,4 +29,6 @@ Vendor.add({
 	website: { type: Types.Url },
 });
 
+Vendor.defaultColumns = 'name, type|20%, website|20%';
+
 Vendor.register();

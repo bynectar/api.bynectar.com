@@ -16,20 +16,18 @@
 
 		<!-- if galleries -->
 		{{#if data.gallery}}
-			{{#each data.gallery}}
 			<!-- Gallery Thumbnail -->
 			<div class="galleriesThumbnail">
 				<div class="galleriesThumbnail__text">
 					<h4 class="galleriesThumbnail__location">From our Galleries</h4>
-					<h3 class="galleriesThumbnail__title">{{title}}</h3>
+					<h3 class="galleriesThumbnail__title">{{data.gallery.title}}</h3>
 					{{!<p class="galleriesThumbnail__blurb">{{{blurb.body\}\}\}</p>}}
-					<a href="/galleries/{{key}}" class="galleriesThumbnail__cta">View Gallery</a>
+					<a href="/galleries/{{data.gallery.key}}" class="galleriesThumbnail__cta">View Gallery</a>
 				</div>
 				<div class="galleriesThumbnail__photo">
-					{{> image image=thumbnail key=key}}
+					{{> image image=data.gallery.thumbnailPhoto key=data.gallery.key}}
 				</div>
 			</div>
-			{{/each}}
 		{{/if}}
 
 		<!-- About Block 1 -->
