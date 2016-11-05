@@ -26,6 +26,7 @@ Vendor.add({
 		{ value: 'caterer', label: 'Caterer' },
 		{ value: 'liveMusic', label: 'Live Music' },
 		{ value: 'dj', label: 'DJ' },
+		{ value: 'cake', label: 'Cake' },
 		{ value: 'invitations', label: 'Invitations' },
 		{ value: 'calligraphy', label: 'Calligraphy' },
 		{ value: 'linens', label: 'Linens' },
