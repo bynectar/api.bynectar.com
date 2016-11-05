@@ -51,7 +51,11 @@
 				<h3>Vendors</h3>
 				<ul>
 					{{#each data.gallery.vendors}}
+					{{#if website}}
 					<li>{{type}}: <a href="{{website}}" title="{{name}}" target="_blank">{{name}}</a></li>
+					{{else}}
+					<li>{{type}}: {{name}}</li>
+					{{/if}}
 					{{/each}}
 				</ul>
 			</div>

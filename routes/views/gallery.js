@@ -27,7 +27,6 @@ exports = module.exports = function (req, res) {
 
 		galleryQuery.exec(function (err, result) {
 			locals.data.gallery = result;
-			locals.data.image = result.thumbnail.image.secure_url;
 			locals.data.title = result.title + " | Nectar Floral Design";
 			locals.data.pageDescription = result.blurb.body;
 		})
@@ -36,6 +35,7 @@ exports = module.exports = function (req, res) {
 				locals.data.thumbnailPhoto = _.filter( result, { 'photoType': 'thumbnail' } )[0];
 				locals.data.gridPhotos = _.filter( result, { 'photoType': 'grid' } );
 				locals.data.quotePhoto = _.filter( result, { 'photoType': 'quote' } )[0];
+				locals.data.image = locals.data.thumbnailPhoto.image.secure_url;
 				locals.data.response = JSON.stringify( locals.data.thumbnailPhoto );
 				next(err);
 			});

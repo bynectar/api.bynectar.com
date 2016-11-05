@@ -2,9 +2,9 @@ var keystone = require('keystone');
 var Types = keystone.Field.Types;
 
 /**
- * Vendor Model
- * =============
- */
+	* Vendor Model
+	* =============
+	*/
 
 var Vendor = new keystone.List('Vendor', {
 	map: { name: 'name' },
@@ -21,8 +21,20 @@ Vendor.add({
 	type: { type: Types.Select, options: [
 		{ value: 'photographer', label: 'Photographer' },
 		{ value: 'venue', label: 'Venue' },
-		{ value: 'caterer', label: 'Caterer' },
 		{ value: 'planner', label: 'Planner' },
+		{ value: 'videographer', label: 'Videography' },
+		{ value: 'caterer', label: 'Caterer' },
+		{ value: 'liveMusic', label: 'Live Music' },
+		{ value: 'dj', label: 'DJ' },
+		{ value: 'cake', label: 'Cake' },
+		{ value: 'invitations', label: 'Invitations' },
+		{ value: 'calligraphy', label: 'Calligraphy' },
+		{ value: 'linens', label: 'Linens' },
+		{ value: 'rentals', label: 'Rentals' },
+		{ value: 'brideDress', label: 'Bride\'s Dress' },
+		{ value: 'brideShoes', label: 'Bride\'s Shoes' },
+		{ value: 'bridemaidDress', label: 'Bridesmaids\' Dress' },
+		{ value: 'groomAttire', label: 'Groom\'s Attire' },
 		{ value: 'other', label: 'Other' }
 	]},
 	other: { type: Types.Text, dependsOn: { type: 'other' } },
