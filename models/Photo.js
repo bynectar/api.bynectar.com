@@ -20,7 +20,18 @@ Photo.add({
 		name: { type: Types.Text },
 		website: { type: Types.Url },
 	},
-	gallery: { type: Types.Relationship, ref: 'Gallery' }
+	photoCredit: { type: Types.Relationship, ref: 'Vendor', filters: { type: 'photographer' } },
+	gallery: { type: Types.Relationship, ref: 'Gallery' },
+	photoType: {
+		type: Types.Select,
+		options: [
+			{ value: 'thumbnail', label: 'Thumbnail' },
+			{ value: 'grid', label: 'Photo Grid' },
+			{ value: 'quote', label: 'Quote Image'}
+		]
+	}
 });
+
+Photo.defaultColumns = 'title, photoType|20%, publishedDate|20%, gallery';
 
 Photo.register();

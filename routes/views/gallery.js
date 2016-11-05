@@ -1,4 +1,5 @@
 var keystone = require('keystone');
+var _ = require('lodash');
 
 exports = module.exports = function (req, res) {
 
@@ -13,26 +14,36 @@ exports = module.exports = function (req, res) {
 		gallery: req.params.gallery,
 	};
 	locals.data = {
-		galleries: [],
+		gallery: [],
 		currentUrl: req.originalUrl,
 	};
 
 	// Load the current gallery
 	view.on('init', function (next) {
 
-		var q = keystone.list('Gallery').model.findOne({
+		var galleryQuery = keystone.list('Gallery').model.findOne({
 			key: locals.filters.gallery,
 		}).populate('thumbnail gridImages vendors quoteImage');
 
-		q.exec(function (err, result) {
+		galleryQuery.exec(function (err, result) {
 			locals.data.gallery = result;
 			locals.data.image = result.thumbnail.image.secure_url;
 			locals.data.title = result.title + " | Nectar Floral Design";
-			locals.data.pageDescription = result.blurb.body
-			next(err);
+			locals.data.pageDescription = result.blurb.body;
+		})
+		.then(function(gallery){
+			keystone.list( 'Photo' ).model.find().where( { gallery: gallery.id } ).populate( 'photoCredit' ).exec( function ( err, result ) {
+				locals.data.thumbnailPhoto = _.filter( result, { 'photoType': 'thumbnail' } )[0];
+				locals.data.gridPhotos = _.filter( result, { 'photoType': 'grid' } );
+				locals.data.quotePhoto = _.filter( result, { 'photoType': 'quote' } )[0];
+				locals.data.response = JSON.stringify( locals.data.thumbnailPhoto );
+				next(err);
+			});
 		});
 
 	});
+
+//	view.query('photos', keystone.list('Photo').model.find().where('gallery','581AA7437CF6E7840D09D16D'));
 
 	// Render the view
 	view.render('gallery');

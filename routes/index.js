@@ -48,8 +48,14 @@ exports = module.exports = function (app) {
 	// NOTE: To protect a route so that only admins can see it, use the requireUser middleware:
 	// app.get('/protected', middleware.requireUser, routes.views.protected);
 
-	// Generate a sitemap
+	// Generate a sitemap, excluding draft and archived galleries
 	app.get('/sitemap.xml', function(req, res) {
-		sitemap.create(keystone, req, res);
+		sitemap.create(keystone, req, res, {
+			filters: {
+				'Gallery': function(gallery) {
+					return gallery.state == 'published';
+				}
+			}
+		});
 	});
 };
