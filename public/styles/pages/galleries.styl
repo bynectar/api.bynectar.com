@@ -181,6 +181,8 @@
 .galleriesThumbnail
 	flexContainer()
 	box-sizing border-box
+	&:nth-child(even)
+		flex-direction row-reverse
 	.galleriesThumbnail__text
 		flexGrow(small,2)
 		flexGrow(medium,1)
