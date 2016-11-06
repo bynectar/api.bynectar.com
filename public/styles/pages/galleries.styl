@@ -273,9 +273,11 @@
 #galleryInfo
 	display flex
 	text-align center
+	@media (max-width:medium)
+		flex-direction column
 	#galleryInfo__vendors
 		flex 1
-		padding 6rem 0
+		padding 4rem 0
 		ul
 			margin 0
 			padding 0
@@ -284,7 +286,7 @@
 				padding .25rem
 	#galleryInfo__cta
 		flex 1
-		padding 6rem 0
+		padding 4rem 0
 
 #galleryModal
 	display none
