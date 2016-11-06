@@ -69,8 +69,8 @@ $(document).ready(function(){
 		margin: 0,
 		columns: 3,
 		breakAt: {
-			520: 2,
-			400: 1
+			900: 2,
+			640: 1
 		}
 	});
 
