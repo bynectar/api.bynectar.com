@@ -1,6 +1,11 @@
 // Main Javascript File
 $(document).ready(function(){
 
+	// Mobile Nav
+	$('#header__navButton').click(function(){
+		$('#header__nav').fadeToggle('fast');
+	});
+
 	// Modal
 	function modalOpen() {
 		$('#galleryModal').addClass('visible').fadeIn(200);

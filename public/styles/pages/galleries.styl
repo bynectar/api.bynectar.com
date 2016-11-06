@@ -252,7 +252,7 @@
 		background linear-gradient(90deg,rgba(0,0,0,0),rgba(0,0,0,0.6))
 		pointer-events none
 		#galleryQuote__text
-			flex-basis 50%
+			flex-basis 100%
 			padding 2rem
 			text-align center
 			box-sizing border-box
@@ -260,7 +260,11 @@
 				heading()
 				font-family font-playfair
 				font-style italic
-				font-size 2.5em
+				font-size 1rem
+				@media (min-width:medium)
+					font-size 1.5rem
+				@media (min-width:large)
+					font-size 2.5rem
 			#galleryQuote__byline
 				surTitle()
 				color white
