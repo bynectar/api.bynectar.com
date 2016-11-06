@@ -16,10 +16,28 @@
 		background-position 0 0
 		background-repeat no-repeat
 
+body.heading-dark
+	#header
+		#header__navButton
+			color white
+		#header__nav
+			color white
+			#nav__pipe
+				color white
+
+html.scroll #header
+	background rgba(255,255,255,.9)
+	#header__navButton
+		color dk-gray
+	#header__nav
+		color dk-gray
+		#nav__pipe
+			color dk-gray
+
 // Mobile Nav
 @media (max-width:medium)
 	#header
-		height 4rem
+		height 5.5rem
 
 		#headerLogo
 			top 15px
@@ -35,7 +53,6 @@
 			right 15px
 			z-index 10
 			font-size 2rem
-			color dk-gray
 			cursor pointer
 			&:hover
 				color amber
@@ -49,7 +66,7 @@
 			background rgba(255,255,255,.9)
 			font-size 2.5rem
 			text-align center
-			color dk-gray
+			color dk-gray !important
 			display none
 
 			ul
@@ -91,6 +108,18 @@
 				#nav__pipe
 					display none
 
+	body.heading-dark
+		#header
+			#headerLogo
+				background-position 0 -35px
+			#header__navButton
+				color white
+
+	html.scroll #header
+		#headerLogo
+			background-position 0 0
+		#header__navButton
+			color dk-gray
 
 // Desktop Nav
 @media (min-width:medium)
@@ -149,16 +178,8 @@
 		#header
 			#headerLogo
 				background-position 0 -70px
-			#header__nav--desktop
-				color white
-				#nav__pipe
-					color white
 
 	html.scroll #header
 		background rgba(255,255,255,.9)
 		#headerLogo
 			background-position 0 0
-		#header__nav--desktop
-			color dk-gray
-			#nav__pipe
-				color dk-gray
