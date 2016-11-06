@@ -61,7 +61,7 @@
 				padding-top 10%
 
 .thumbWrapper
-	aspect(small,2,3)
+	aspect(small,3,2)
 	aspect(medium,4,5)
 	aspect(large,6,5)
 	width 100%
@@ -167,11 +167,30 @@
 			opacity 1
 			.thumbText
 				padding-top 10%
+	@media (min-width:small)
+		.thumbActions
+			opacity 1
+			.thumbActions__action
+				margin-top 0
+			.thumbActions__byline
+				margin-top 0
+	@media (min-width:medium)
+		.thumbActions
+			opacity 0
+			.thumbActions__action
+				margin-top 3rem
+			.thumbActions__byline
+				margin-top 3rem
+
 
 // Gallery Listing View Styles
 #galleriesHero,#galleryHero
 	textHero()
-	aspect(small,3,1)
+	aspect(small,5,3)
+	aspect(medium,5,2)
+	aspect(large,3,1)
+	#galleryHero__location
+		color dk-gray
 
 #galleryBody
 	width 100%
@@ -179,25 +198,13 @@
 	box-sizing border-box
 
 .galleriesThumbnail
-	flexContainer()
-	box-sizing border-box
-	&:nth-child(even)
-		flex-direction row-reverse
+	pingPong()
 	.galleriesThumbnail__text
-		flexGrow(small,2)
-		flexGrow(medium,1)
-		box-sizing border-box
-		text-align center
-		h4
-			surTitle()
-		.galleriesThumbnail__cta
-			button()
-			margin-top 2rem
-		& > *
-			padWidth(small,10%,10%)
-			padWidth(medium,20%,20%)
+		pingPongText()
+		.galleriesThumbnail__location
+			color dk-gray
 	.galleriesThumbnail__photo
-		flexGrow(small,1)
+		pingPongImage()
 
 .galleryThumbnail
 	flexContainer()

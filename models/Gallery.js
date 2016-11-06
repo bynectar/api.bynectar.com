@@ -20,6 +20,7 @@ Gallery.add({
 	publishedDate: { type: Types.Datetime, default: Date.now },
 	state: { type: Types.Select, options: 'draft, published, archived', default: 'draft', index: true },
 	subtitle: { type: Types.Text, required: true, default: 'Subtitle' },
+	location: { type: Types.Text },
 	blurb: {
 		title: { type: Types.Text },
 		subtitle: { type: Types.Text },

@@ -29,6 +29,7 @@ exports = module.exports = function (req, res) {
 			locals.data.gallery = result;
 			locals.data.title = result.title + " | Nectar Floral Design";
 			locals.data.pageDescription = result.blurb.body;
+			locals.data.gallery.venue = _.filter( locals.data.gallery.vendors, { 'type': 'venue' } )[0];
 		})
 		.then(function(gallery){
 			keystone.list( 'Photo' ).model.find().where( { gallery: gallery.id } ).populate( 'photoCredit' ).exec( function ( err, result ) {

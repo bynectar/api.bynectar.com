@@ -17,15 +17,8 @@
 	box-sizing border-box
 
 	.aboutBlock
-		flexContainer()
-		text-align center
-		&:nth-child(2n+2)
-			flex-direction row-reverse
+		pingPong()
 		.aboutBlock__photo
-			flex 1
+			pingPongImage()
 		.aboutBlock__text
-			flex 1
-			box-sizing border-box
-			& > *
-				padWidth(small,10%,10%)
-				padWidth(medium,20%,20%)
+			pingPongText()

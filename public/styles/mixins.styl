@@ -50,6 +50,35 @@ centered-column()
 	float none
 	margin 0 auto
 
+pingPong()
+	flexContainer()
+	box-sizing border-box
+	flex-direction column
+	@media (min-width: medium)
+		flex-direction row
+		&:nth-child(even)
+			flex-direction row-reverse
+
+pingPongImage()
+	flex 1
+	width 100%
+	@media (min-width: medium)
+		width auto
+
+pingPongText()
+	padHeight(small,3rem,6rem)
+	padHeight(medium,2rem,2rem)
+	flex 1
+	text-align center
+	h4
+		surTitle()
+	a.cta
+		button()
+		margin-top 2rem
+	& > *
+		padWidth(small,0%,0%)
+		padWidth(medium,20%,20%)
+
 // Misc
 aspect(breakpoint,w,h)
 	@media (min-width: breakpoint)
