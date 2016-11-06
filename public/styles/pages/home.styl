@@ -13,20 +13,8 @@
 	box-sizing border-box
 
 	.homeBlock
-		flexContainer()
-		flex-direction row-reverse
-		text-align center
-		.homeBlock__photo
-			flexGrow(small,1)
+		pingPong()
 		.homeBlock__text
-			padHeight(small,2rem,2rem)
-			flexGrow(small,2)
-			flexGrow(medium,1)
-			box-sizing border-box
-			.homeBlock__subtitle
-				surTitle()
-			& > *:not(a)
-				padWidth(small,10%,10%)
-				padWidth(medium,20%,20%)
-			a.cta
-				margin-top 2rem
+			pingPongText()
+		.homeBlock__photo
+			pingPongImage()

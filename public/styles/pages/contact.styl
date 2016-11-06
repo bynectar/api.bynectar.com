@@ -1,6 +1,8 @@
 #contactHero
 	imageHero()
-	aspect(small,5,2)
+	aspect(small,5,6)
+	aspect(medium,5,3)
+	aspect(large,5,2)
 	.heroText
 		padWidth(small,10%,10%)
 		p
@@ -10,15 +12,19 @@
 			margin-top 2rem
 
 #contactBody
-	margin-bottom 4rem
-
 	flexContainer()
 	align-items stretch
-	padding .25rem
 	box-sizing border-box
-
+	padding .25rem
+	margin-bottom 4rem
+	@media (min-width:small)
+		flex-direction column-reverse
+	@media (min-width:medium)
+		flex-direction row
 	.contactColumn
-		padWidth(small,10%,10%)
+		padWidth(small,5%,5%)
+		padWidth(medium,10%,10%)
+		padWidth(large,10%,10%)
 		padding-top 4rem
 		flex 1
 		text-align center

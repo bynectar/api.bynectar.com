@@ -22,11 +22,16 @@ section
 
 footer
 	flexContainer()
+	@media (min-width:small)
+		flex-direction column-reverse
+	@media (min-width:medium)
+		flex-direction row
 	align-items stretch
 	padding 6rem 0
 	.footerColumn
 		padWidth(small,5%,5%)
 		flex 1
+		padding-bottom 4rem
 		ul
 			list-style none
 			padding 0

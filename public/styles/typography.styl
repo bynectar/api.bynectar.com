@@ -3,9 +3,9 @@ html
 	line-height 1.75
 	color dk-gray
 	@media (min-width: small)
-		font-size 10px
+		font-size 14px
 	@media (min-width: medium)
-		font-size 12px
+		font-size 14px
 	@media (min-width: large)
 		font-size 14px
 
@@ -20,13 +20,12 @@ heading()
 pageTitle()
 	heading()
 	font-family font-playfair
-	font-size 4rem
 	font-style italic
 	font-weight normal
 
 surTitle()
 	font-family font-work
-	font-size .9rem
+	font-size 1rem
 	font-weight 400
 	text-transform uppercase
 	letter-spacing .1rem
@@ -41,6 +40,8 @@ h2
 	heading()
 	font-family font-playfair
 	font-size 4rem
+	@media (max-width:medium)
+		font-size 3.5rem
 
 h3
 	heading()
@@ -125,3 +126,4 @@ form
 	button, input[type="submit"]
 		button()
 		margin-top 2rem
+

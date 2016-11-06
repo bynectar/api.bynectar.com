@@ -1,6 +1,11 @@
 // Main Javascript File
 $(document).ready(function(){
 
+	// Mobile Nav
+	$('#header__navButton').click(function(){
+		$('#header__nav').fadeToggle('fast');
+	});
+
 	// Modal
 	function modalOpen() {
 		$('#galleryModal').addClass('visible').fadeIn(200);
@@ -64,8 +69,8 @@ $(document).ready(function(){
 		margin: 0,
 		columns: 3,
 		breakAt: {
-			520: 2,
-			400: 1
+			900: 2,
+			640: 1
 		}
 	});
 

@@ -1,9 +1,9 @@
 #aboutHero
 	imageHero()
-	aspect(small,1,1)
+	aspect(small,2,3)
 	aspect(medium,2,1)
 	.heroText
-		padWidth(small,20%,20%)
+		padWidth(small,10%,10%)
 		padWidth(medium,25%,25%)
 		p
 			font-size 1.25rem
@@ -17,15 +17,8 @@
 	box-sizing border-box
 
 	.aboutBlock
-		flexContainer()
-		text-align center
-		&:nth-child(2n+2)
-			flex-direction row-reverse
+		pingPong()
 		.aboutBlock__photo
-			flex 1
+			pingPongImage()
 		.aboutBlock__text
-			flex 1
-			box-sizing border-box
-			& > *
-				padWidth(small,10%,10%)
-				padWidth(medium,20%,20%)
+			pingPongText()

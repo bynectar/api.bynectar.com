@@ -1,4 +1,5 @@
 var keystone = require('keystone');
+var _ = require('lodash');
 
 exports = module.exports = function (req, res) {
 
@@ -23,7 +24,7 @@ exports = module.exports = function (req, res) {
 	// Load the current gallery
 	view.on('init', function (next) {
 
-		var galleriesQuery = keystone.list('Gallery').model.find().where( { state: 'published' } ).sort('-publishedDate');
+		var galleriesQuery = keystone.list('Gallery').model.find().where( { state: 'published' } ).sort('-publishedDate').populate('vendors');
 
 		galleriesQuery.exec(function (err, result) {
 			locals.galleries = result;
@@ -34,6 +35,7 @@ exports = module.exports = function (req, res) {
 					galleries.forEach(function(gallery){
 						if ( gallery.id == photo.gallery ) {
 							gallery.thumbnailPhoto = photo;
+							gallery.venue = _.filter( gallery.vendors, { 'type': 'venue' } )[0];
 							locals.data.image = photo.image.secure_url;
 						};
 					})

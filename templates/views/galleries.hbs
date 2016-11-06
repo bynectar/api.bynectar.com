@@ -18,16 +18,17 @@
 		{{#each galleries}}
 		<!-- Gallery Thumbnail -->
 		<div class="galleriesThumbnail">
-			<div class="galleriesThumbnail__text">
-				<h3 class="galleriesThumbnail__title">{{title}}</h3>
-				<h4 class="galleriesThumbnail__location">{{subtitle}}</h4>
-				{{!<p class="galleriesThumbnail__blurb">{{{blurb.body\}\}\}</p>}}
-				<a href="/galleries/{{key}}" class="galleriesThumbnail__cta">View Gallery</a>
-			</div>
 			<div class="galleriesThumbnail__photo">
 				<a href="/galleries/{{key}}" title="{{title}}">
 					{{> image image=this.thumbnailPhoto key=key width=1200 height=800}}
 				</a>
+			</div>
+			<div class="galleriesThumbnail__text">
+				<h3 class="galleriesThumbnail__title">{{title}}</h3>
+				<h4 class="galleriesThumbnail__venue">{{venue.name}}</h4>
+				<h4 class="galleriesThumbnail__location">{{location}}</h4>
+				{{!<p class="galleriesThumbnail__blurb">{{{blurb.body\}\}\}</p>}}
+				<a href="/galleries/{{key}}" class="galleriesThumbnail__cta cta">View Gallery</a>
 			</div>
 		</div>
 		{{/each}}
