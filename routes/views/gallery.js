@@ -32,7 +32,7 @@ exports = module.exports = function (req, res) {
 			locals.data.gallery.venue = _.filter( locals.data.gallery.vendors, { 'type': 'venue' } )[0];
 		})
 		.then(function(gallery){
-			keystone.list( 'Photo' ).model.find().where( { gallery: gallery.id } ).populate( 'photoCredit' ).exec( function ( err, result ) {
+			keystone.list( 'Photo' ).model.find().sort('title').where( { gallery: gallery.id } ).populate( 'photoCredit' ).exec( function ( err, result ) {
 				locals.data.thumbnailPhoto = _.filter( result, { 'photoType': 'thumbnail' } )[0];
 				locals.data.gridPhotos = _.filter( result, { 'photoType': 'grid' } );
 				locals.data.quotePhoto = _.filter( result, { 'photoType': 'quote' } )[0];
