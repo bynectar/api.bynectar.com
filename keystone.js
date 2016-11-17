@@ -84,6 +84,7 @@ keystone.set('nav', {
 	galleries: 'galleries',
 	photos: 'photos',
 	vendors: 'vendors',
+	press: 'presses',
 	users: 'users',
 });
 
