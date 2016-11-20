@@ -2,11 +2,36 @@
 	imageHero()
 	aspect(small,1,1)
 	aspect(medium,2,1)
-	.heroText
-		padWidth(small,20%,20%)
-		padWidth(medium,10%,10%)
-		.heroText__title
-			padding-bottom 0rem
+	background-image linear-gradient( to right top, #f6ddb5, amber)
+	.heroBody
+		.heroText
+			padWidth(small,20%,20%)
+			padWidth(medium,10%,10%)
+			z-index 1
+			.heroText__title
+				padding-bottom 0rem
+				margin 0
+				font-size 4rem
+				@media (min-width: medium)
+					font-size 6rem
+				@media (min-width: large)
+					font-size 10rem
+			a
+				buttonLight()
+				margin-top 2rem
+		#homeHero__video
+			positionAll(0)
+			overflow hidden
+			video
+				position absolute
+				top 50%
+				left 50%
+				-webkit-transform translateX(-50%) translateY(-50%)
+				transform translateX(-50%) translateY(-50%)
+				min-width 100%
+				min-height 100%
+				z-index 0
+				opacity .4
 
 #homeBody
 	padding .25rem

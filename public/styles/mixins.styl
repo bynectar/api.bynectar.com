@@ -60,7 +60,7 @@ pingPong()
 			flex-direction row-reverse
 
 pingPongImage()
-	flex 1
+	flex 2
 	width 100%
 	@media (min-width: medium)
 		width auto
@@ -142,10 +142,17 @@ button()
 	font-family font-work
 	font-size 1rem
 	color dk-gray
-	background white
+	background none
 	transition all linear .2s
 	&:hover
 		border-color mid-gray
+
+buttonLight()
+	button()
+	color white
+	border-color rgba(255, 255, 255, 0.4);
+	&:hover
+		border-color rgba(255, 255, 255, 1);
 
 blackUnderline()
 	background-image linear-gradient(to bottom,rgba(68,68,68,.6) 50%,rgba(68,68,68,0) 50%)

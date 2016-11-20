@@ -74,4 +74,50 @@ $(document).ready(function(){
 		}
 	});
 
+	// Fade on Scroll
+	(function ($) {
+		'use strict';
+		var results = {};
+
+		function calculateOpacity(el) {
+			var windowHeight = $(window).height(),
+				docScroll = $(document).scrollTop(),
+				elPosition = el.offset().top,
+				elHeight = el.outerHeight(),
+				hiddenBefore = docScroll - elPosition,
+				hiddenAfter = (elPosition + elHeight) - (docScroll + windowHeight);
+
+			if ((docScroll > elPosition + elHeight) || (elPosition > docScroll + windowHeight)) {
+				return 0;
+			} else {
+				var result = 1;
+
+				if (hiddenBefore > 0) {
+					result -= (hiddenBefore / elHeight)*(hiddenBefore / elHeight)*(hiddenBefore / elHeight);
+				}
+
+				if (hiddenAfter > 0) {
+					result -= (hiddenAfter / elHeight)*(hiddenAfter / elHeight)*(hiddenAfter / elHeight);
+				}
+
+				return result;
+			}
+		}
+
+		function fadeImages() {
+			$('.scrollFade').each(function () {
+				var thumbnail = $(this);
+				calculateOpacity(thumbnail);
+				thumbnail.find('.thumbImage').css('opacity', calculateOpacity(thumbnail));
+			});
+		}
+
+		$(document).scroll(function () {
+			fadeImages();
+		});
+
+		$(document).ready(function () {
+			fadeImages();
+		});
+	}(jQuery));
 });

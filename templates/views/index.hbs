@@ -2,13 +2,20 @@
 {{> head}}
 {{> header}}
 
-	<section id="homeHero" style="background-image:url(/images/home/summerstreetphotography-81.jpg);">
+	<section id="homeHero">
 		<div class="heroBody">
+			<div id="homeHero__video">
+				<video autoplay loop preload>
+					<source src="/video/nectar_feature.mp4" type="video/mp4">
+					<source src="/video/nectar_feature.mp4" type="video/ogg">
+				</video>
+			</div>
 			<div class="heroText">
 				<!--<img src="/images/nectar-wordmark.png" width="600" height="111" alt="nectar" />-->
 				<h2 class="heroText__title">It takes love.</h2>
+				<p>Lorem ipsum dolor sit amet, lorem ipsum dolor sit.</p>
+				<a href="#">Watch the Video</a>
 			</div>
-			<span class="photoCredit">Photo by <a href="http://summerstreetphotography.com/" target="_blank">Summer Street Photography</a></span>
 		</div>
 	</section>
 
@@ -18,7 +25,7 @@
 		{{#if data.gallery}}
 			<!-- Gallery Thumbnail -->
 			<div class="galleriesThumbnail homeBlock">
-				<div class="galleriesThumbnail__photo">
+				<div class="galleriesThumbnail__photo scrollFade">
 					{{> image image=data.gallery.thumbnailPhoto key=data.gallery.key}}
 				</div>
 				<div class="galleriesThumbnail__text">
@@ -32,7 +39,7 @@
 
 		<!-- About Block 1 -->
 		<div class="homeBlock">
-			<div class="homeBlock__photo">
+			<div class="homeBlock__photo scrollFade">
 				{{> imageCustom
 					title='placeholder image'
 					src='/images/process/2016-10-08_Misty-Centerpiece-1.jpg'
