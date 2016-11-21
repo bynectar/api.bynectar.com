@@ -46,5 +46,22 @@
 			</div>
 		</div>
 
+		<div class="homeBlock">
+			<ul id="nectarInstagram">
+				<li>
+					<h4>On Instagram</h4>
+					<h3>@bynectar</h3>
+					<a href="http://www.bynectar.com/bynectar" target="_blank" class="cta">Visit Us</a>
+				</li>
+				{{#each data.instagramFeed}}
+				<li>
+					<a href="{{{link}}}" target="_blank">
+						<img width="320" height="320" src="{{{images.standard_resolution.url}}}">
+					</a>
+				</li>
+				{{/each}}
+			</ul>
+		</div>
+
 	</section>
 {{> footer}}

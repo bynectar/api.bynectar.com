@@ -18,3 +18,36 @@
 			pingPongText()
 		.homeBlock__photo
 			pingPongImage()
+
+	#nectarInstagram
+		flexContainer()
+		flex-wrap wrap
+		list-style none
+		padding 0
+		&:hover > li
+			opacity .8
+			&:nth-child(1)
+				opacity 1
+		& > li
+			padding 0
+			border .25rem solid white
+			box-sizing border-box
+			transition opacity linear .1s
+			@media (min-width 0)
+				width 50%
+			@media (min-width medium)
+				width 33.3%
+			@media (min-width large)
+				width 25%
+			&:hover
+				opacity 1
+			&:nth-child(1)
+				text-align center
+				@media (min-width medium) and (max-width large)
+					width 66.6%
+				h4
+					surTitle()
+			img
+				display block
+				width 100%
+				height auto
