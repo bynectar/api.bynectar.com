@@ -14,7 +14,7 @@
 
 	<section id="homeBody">
 
-		<!-- if galleries -->
+		<!-- Latest Gallery -->
 		{{#if data.gallery}}
 			<!-- Gallery Thumbnail -->
 			<div class="galleriesThumbnail homeBlock">
@@ -30,7 +30,7 @@
 			</div>
 		{{/if}}
 
-		<!-- About Block 1 -->
+		<!-- Our Process -->
 		<div class="homeBlock">
 			<div class="homeBlock__photo">
 				{{> imageCustom
@@ -46,17 +46,18 @@
 			</div>
 		</div>
 
+		<!-- Latest Instagram Posts -->
 		<div class="homeBlock">
 			<ul id="nectarInstagram">
 				<li>
 					<h4>On Instagram</h4>
 					<h3>@bynectar</h3>
-					<a href="http://www.bynectar.com/bynectar" target="_blank" class="cta">Visit Us</a>
+					<a href="http://www.bynectar.com/bynectar" target="_blank" class="cta" title="Nectar on Instagram">Visit Us</a>
 				</li>
 				{{#each data.instagramFeed}}
 				<li>
-					<a href="{{{link}}}" target="_blank">
-						<img width="320" height="320" src="{{{images.standard_resolution.url}}}">
+					<a href="{{{link}}}" target="_blank" title="Nectar on Instagram | {{{caption.text}}}">
+						<img width="320" height="320" src="{{{images.standard_resolution.url}}}" alt="Nectar on Instagram | {{{caption.text}}}">
 					</a>
 				</li>
 				{{/each}}
