@@ -337,5 +337,9 @@ module.exports = function () {
 		return d.getFullYear();
 	};
 
+	_helpers.toJSON = function(obj) {
+		return JSON.stringify(obj, null, 3);
+	};
+
 	return _helpers;
 };
