@@ -74,12 +74,4 @@ $(document).ready(function(){
 		}
 	});
 
-	// Instagram Feed
-	jQuery.fn.spectragram.accessData = {
-		accessToken: '03da278a95114fa6ad046f1c7dc68b8d',
-		clientID: '1b46764a291c4f9c94d07878c23a00f2'
-	};
-	$('ul.nectarInstagram').spectragram('getUserFeed',{
-		query: 'bynectar'
-	});
 });
