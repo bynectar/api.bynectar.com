@@ -1,8 +1,6 @@
 var keystone = require('keystone');
 var ig = require('instagram-node').instagram();
 var https = require('https');
-var Console = require('console').Console;
-var Console = console.Console;
 
 exports = module.exports = function (req, res) {
 
@@ -40,7 +38,6 @@ exports = module.exports = function (req, res) {
 					"access_token": "194321043.1677ed0.bdb85ac6aa0e495390ba03e1825225a4"
 				});
 				ig.user_media_recent("194321043",{count:7},function(err, medias, pagination, remaining, limit) {
-					console.log(medias);
 					locals.data.instagramFeed = medias;
 					next(err);
 				});
