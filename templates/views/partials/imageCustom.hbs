@@ -1,8 +1,16 @@
 {{! Standard image block }}
 <div class="thumbWrapper">
 
+	{{#if link}}
+		<a href="{{link}}">
+	{{/if}}
+
 	{{! Use provided URL }}
 	<img class="thumbImage" src="{{src}}">
+
+	{{#if link}}
+		</a>
+	{{/if}}
 
 	<div class="thumbOverlay">
 		<div class="thumbText">

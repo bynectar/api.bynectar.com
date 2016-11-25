@@ -18,9 +18,7 @@
 		<!-- Gallery Thumbnail -->
 		<div class="pressThumbnail">
 			<div class="pressThumbnail__photo">
-				<a href="{{this.url}}" title="{{this.publication}} | {{this.title}}" target="_blank">
-					{{> imageCustom src=this.photo.secure_url width=1200 height=800}}
-				</a>
+				{{> imageCustom src=this.photo.secure_url link=this.url title=this.title width=1200 height=800}}
 			</div>
 			<div class="pressThumbnail__text">
 				<h4 class="pressThumbnail__publication">{{this.publication}}</h4>
