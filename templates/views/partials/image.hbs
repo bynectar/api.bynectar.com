@@ -27,7 +27,11 @@
 			<span class="thumbActions__action thumbActions__action--showCaption"><i class="fa fa-bars"></i></span>
 		{{/if}}
 		<span class="thumbActions__action">
-			<a href="https://www.pinterest.com/pin/create/button/">
+			<a href="https://www.pinterest.com/pin/create/button/"
+			data-pin-custom="true"
+			data-pin-media="{{image.image.secure_url}}"
+			data-pin-url="http://www.bynectar.com"
+			data-pin-description="{{image.title}} – bynectar.com">
 				<i class="fa fa-pinterest"></i>
 			</a>
 		</span>
