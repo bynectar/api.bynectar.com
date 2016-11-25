@@ -36,11 +36,15 @@ var routes = {
 exports = module.exports = function (app) {
 	// Views
 	app.get('/', routes.views.index);
-	app.get('/about-us', routes.views.about);
+	app.get('/meet-misty', routes.views.misty);
 	app.get('/our-process', routes.views.process);
 	app.get('/galleries', routes.views.galleries);
 	app.get('/galleries/:gallery', routes.views.gallery);
 	app.get('/contact', routes.views.contact);
+	// Redirects
+	app.get('/about-us', function(req,res){
+		res.redirect('/meet-misty');
+	});
 	//TODO Implement the blog at a later time
 	//	app.get('/blog/:category?', routes.views.blog);
 	//	app.get('/blog/post/:post', routes.views.post);
@@ -61,7 +65,8 @@ exports = module.exports = function (app) {
 				'Gallery': function(gallery) {
 					return gallery.state == 'published';
 				}
-			}
+			},
+			ignore: ['/about-us']
 		});
 	});
 };
