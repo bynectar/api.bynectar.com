@@ -40,6 +40,7 @@ exports = module.exports = function (app) {
 	app.get('/our-process', routes.views.process);
 	app.get('/galleries', routes.views.galleries);
 	app.get('/galleries/:gallery', routes.views.gallery);
+	app.get('/press', routes.views.press);
 	app.get('/contact', routes.views.contact);
 	// Redirects
 	app.get('/about-us', function(req,res){

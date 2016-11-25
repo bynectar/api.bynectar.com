@@ -1,0 +1,37 @@
+{{> head}}
+{{> header}}
+
+	<section id="pressHero">
+		<div class="heroBody">
+			<div class="heroText">
+				<h1 class="heroText__surTitle">Press</h1>
+				<h2 class="heroText__title">All That's Fit to Print</h2>
+			</div>
+		</div>
+	</section>
+
+	<section id="pressBody">
+
+	<!-- if galleries -->
+	{{#if press}}
+		{{#each press}}
+		<!-- Gallery Thumbnail -->
+		<div class="pressThumbnail">
+			<div class="pressThumbnail__photo">
+				{{> imageCustom src=this.photo.secure_url link=this.url title=this.title width=1200 height=800}}
+			</div>
+			<div class="pressThumbnail__text">
+				<h4 class="pressThumbnail__publication">{{this.publication}}</h4>
+				<h3 class="pressThumbnail__title">{{this.title}}</h3>
+				<a href="{{this.url}}" class="galleriesThumbnail__cta cta" title="{{this.publication}} | {{this.title}}" target="_blank">Check it Out</a>
+			</div>
+		</div>
+		{{/each}}
+	{{else}}
+	<!-- else -->
+	<h3 class="text-muted">There is no press yet.</h3>
+	{{/if}}
+
+	</section>
+
+{{> footer}}
