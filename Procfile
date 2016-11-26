@@ -1,1 +1,1 @@
-web: make prod
+web: node keystone.js
