@@ -67,7 +67,10 @@ exports = module.exports = function (app) {
 					return gallery.state == 'published';
 				}
 			},
-			ignore: ['/about-us']
+			ignore: [
+				'/about-us',
+				'/preconsultation-form'
+			]
 		});
 	});
 };
