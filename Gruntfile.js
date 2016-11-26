@@ -31,6 +31,8 @@ module.exports = function (grunt) {
 
 	grunt.registerTask('dev', ['stylus', 'watch']);
 	grunt.registerTask('prod', ['stylus', 'nodemon']);
+	grunt.registerTask('heroku', ['stylus']);
+	grunt.registerTask('heroku:production', ['stylus']);
 
 
 	// default option to connect server
