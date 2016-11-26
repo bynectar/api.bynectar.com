@@ -32,7 +32,6 @@
   },
   "scripts": {
     "lint": "eslint .",
-    "start": "node keystone.js",
-    "postinstall": "grunt stylus"
+    "start": "node keystone.js"
   }
 }
