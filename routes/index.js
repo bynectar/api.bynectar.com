@@ -50,12 +50,18 @@ exports = module.exports = function (app) {
 	//	app.get('/blog/:category?', routes.views.blog);
 	//	app.get('/blog/post/:post', routes.views.post);
 
+	// Hidden Views
+	app.get('/preconsultation-form', routes.views.preconForm);
+
 	// NOTE: To protect a route so that only admins can see it, use the requireUser middleware:
 	// app.get('/protected', middleware.requireUser, routes.views.protected);
 
 	// Generate a sitemap, excluding draft and archived galleries
 	app.get('/sitemap.xml', function(req, res) {
 		sitemap.create(keystone, req, res, {
+			ignore: [
+				'/preconsultation-form'
+			],
 			filters: {
 				'Gallery': function(gallery) {
 					return gallery.state == 'published';
