@@ -109,7 +109,7 @@ form
 		&.inlineLabel
 			display inline
 
-	input
+	input,textarea
 		box-sizing border-box
 		width 100%
 		padding 0 .5rem
@@ -117,11 +117,13 @@ form
 		line-height 3rem
 		background lt-gray
 		border none
-		&[type="textarea"]
-			height 9rem
-		&[type="checkbox"]
+		&[type="checkbox"], &[type="radio"]
 			display inline
 			width auto
+
+	textarea
+		padding .5rem
+		line-height 1.5rem
 
 	button, input[type="submit"]
 		button()
