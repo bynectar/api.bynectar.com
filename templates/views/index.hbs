@@ -19,7 +19,7 @@
 			<!-- Gallery Thumbnail -->
 			<div class="galleriesThumbnail homeBlock">
 				<div class="galleriesThumbnail__photo">
-					{{> image image=data.gallery.thumbnailPhoto key=data.gallery.key}}
+					{{> image image=data.gallery.thumbnailPhoto key=data.gallery.key wide=true}}
 				</div>
 				<div class="galleriesThumbnail__text">
 					<h4 class="galleriesThumbnail__location">From our Galleries</h4>
@@ -36,6 +36,7 @@
 				{{> imageCustom
 					title='placeholder image'
 					src='/images/process/2016-10-08_Misty-Centerpiece-1.jpg'
+					wide=true
 				}}
 			</div>
 			<div class="homeBlock__text">

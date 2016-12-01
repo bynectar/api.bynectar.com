@@ -1,5 +1,9 @@
 {{! Standard image block }}
+{{#if wide}}
+<div class="thumbWrapperWide">
+{{else}}
 <div class="thumbWrapper">
+{{/if}}
 
 	{{#if link}}
 		<a href="{{link}}">
