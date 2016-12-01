@@ -2,7 +2,7 @@
 	<h4><em>Step 1 of 6</em> / Basic Information</h4>
 	<fieldset>
 		<label for="fieldName">Your Name</label>
-		<input id="fieldName" name="cm-name" type="text" />
+		<input id="fieldName" name="cm-name" type="text" required />
 	</fieldset>
 	<fieldset>
 		<label for="fieldEmail">Your Email</label>
@@ -10,27 +10,27 @@
 	</fieldset>
 	<fieldset>
 		<label for="fieldiutilljk">Your Phone Number</label>
-		<input id="fieldiutilljk" name="cm-f-iutilljk" type="text" />
+		<input id="fieldiutilljk" name="cm-f-iutilljk" type="text" required />
 	</fieldset>
 	<fieldset>
 		<label for="fieldiutilrlu">Your Fianceé's Name</label>
-		<input id="fieldiutilrlu" name="cm-f-iutilrlu" type="text" />
+		<input id="fieldiutilrlu" name="cm-f-iutilrlu" type="text" required />
 	</fieldset>
 	<fieldset>
 		<label for="fieldiutilrih">Your Fianceé's Email</label>
-		<input id="fieldiutilrih" name="cm-f-iutilrih" type="text" />
+		<input id="fieldiutilrih" name="cm-f-iutilrih" type="text" required />
 	</fieldset>
 	<fieldset>
 		<label for="fieldiutilrky">Your Fianceé's Phone Number</label>
-		<input id="fieldiutilrky" name="cm-f-iutilrky" type="text" />
+		<input id="fieldiutilrky" name="cm-f-iutilrky" type="text" required />
 	</fieldset>
 	<fieldset>
 		<label for="fieldiutilydt">Your Address</label>
-		<input id="fieldiutilydt" name="cm-f-iutilydt" type="text" />
+		<input id="fieldiutilydt" name="cm-f-iutilydt" type="text" required />
 	</fieldset>
 	<fieldset>
 		<label for="fieldiutilkki">When is your wedding?</label>
-		<select id="fieldiutilkki" name="cm-fd-iutilkki-mn">
+		<select id="fieldiutilkki" name="cm-fd-iutilkki-mn" required>
 			<option value="">Month</option>
 			<option value="1">Jan</option>
 			<option value="2">Feb</option>
@@ -45,7 +45,7 @@
 			<option value="11">Nov</option>
 			<option value="12">Dec</option>
 		</select>
-		<select id="fieldiutilkkidy" name="cm-fd-iutilkki-dy">
+		<select id="fieldiutilkkidy" name="cm-fd-iutilkki-dy" required>
 			<option value="">Day</option>
 			<option value="1">1</option>
 			<option value="2">2</option>
@@ -79,7 +79,7 @@
 			<option value="30">30</option>
 			<option value="31">31</option>
 		</select>
-		<select id="fieldiutilkkiyr" name="cm-fd-iutilkki-yr">
+		<select id="fieldiutilkkiyr" name="cm-fd-iutilkki-yr" required>
 			<option value="">Year</option>
 			<option value="2016">2016</option>
 			<option value="2017">2017</option>
@@ -90,22 +90,18 @@
 	</fieldset>
 	<fieldset>
 		<label for="fieldiutioe">Number of Guests</label>
-		<input id="fieldiutioe" name="cm-f-iutioe" type="text" />
-	</fieldset>
-	<fieldset>
-		<label for="fieldiutiott">Number of Tables at Your Reception</label>
-		<input id="fieldiutiott" name="cm-f-iutiott" type="text" />
+		<input id="fieldiutioe" name="cm-f-iutioe" type="text" required />
 	</fieldset>
 
 	<hr>
 	<h4><em>Step 2 of 6</em> / Ceremony Information</h4>
 	<fieldset>
-		<label for="fieldiuthmjk">Ceremony Start</label>
-		<input id="fieldiuthmjk" name="cm-f-iuthmjk" type="text" />
+		<label for="fieldiuthmjk">Ceremony Start Time</label>
+		<input id="fieldiuthmjk" name="cm-f-iuthmjk" type="text" required />
 	</fieldset>
 	<fieldset>
 		<label for="fieldiutipld">What Type of Ceremony Are You Having?</label>
-		<select id="fieldiutipld" name="cm-fo-iutipld">
+		<select id="fieldiutipld" name="cm-fo-iutipld" required>
 			<option value="">Select One</option>
 			<option value="8671059">Indoor</option>
 			<option value="8671060">Outdoor</option>
@@ -113,90 +109,98 @@
 	</fieldset>
 	<fieldset>
 		<label for="fieldiutibui">Ceremony Address</label>
-		<input id="fieldiutibui" name="cm-f-iutibui" type="text" />
+		<input id="fieldiutibui" name="cm-f-iutibui" type="text" required />
 	</fieldset>
 	<fieldset>
 		<label for="fieldiutinyu">Ceremony Contact</label>
-		<input id="fieldiutinyu" name="cm-f-iutinyu" type="text" />
+		<input id="fieldiutinyu" name="cm-f-iutinyu" type="text" required />
 	</fieldset>
 
 	<hr>
 	<h4><em>Step 3 of 6</em> / Reception Info</h4>
 	<p>Tell us about your Wedding Reception.</p>
 	<fieldset>
-		<label for="fieldiuthctu">Cocktail Start</label>
-		<input id="fieldiuthctu" name="cm-f-iuthctu" type="text" />
+		<label for="fieldiuthctu">Cocktail Start Time</label>
+		<input id="fieldiuthctu" name="cm-f-iuthctu" type="text" required />
 	</fieldset>
 	<fieldset>
-		<label for="fieldiuthcil">Reception Start</label>
-		<input id="fieldiuthcil" name="cm-f-iuthcil" type="text" />
+		<label for="fieldiuthcil">Reception Start Time</label>
+		<input id="fieldiuthcil" name="cm-f-iuthcil" type="text" required />
 	</fieldset>
 	<fieldset>
-		<label for="fieldiuthcir">Reception End</label>
-		<input id="fieldiuthcir" name="cm-f-iuthcir" type="text" />
+		<label for="fieldiuthcir">Reception End Time</label>
+		<input id="fieldiuthcir" name="cm-f-iuthcir" type="text" required />
 	</fieldset>
 	<fieldset>
 		<label for="fieldiuticid">Is the Reception in the Same Location as the Ceremony?</label>
-		<input type="checkbox" id="fieldiuticid" name="cm-fo-iuticid" value="8671061">
+		<input type="radio" id="fieldiuticid" name="cm-fo-iuticid" value="8671061" required>
 		<label class="inlineLabel" for="cm-fo-iuticid">Yes, it is in the same location.</label>
 		<br />
-		<input type="checkbox" id="fieldiuticid" name="cm-fo-iuticid" value="8675060">
+		<input type="radio" id="fieldiuticid" name="cm-fo-iuticid" value="8675060" required>
 		<label class="inlineLabel" for="cm-fo-iuticid">No, it isn't. (Fill out the fields below)</label>
+		</select>
 	</fieldset>
 	<fieldset>
 		<label for="fieldiutifij">Reception Address</label>
-		<input id="fieldiutifij" name="cm-f-iutifij" type="text" />
+		<input id="fieldiutifij" name="cm-f-iutifij" type="text" required />
 	</fieldset>
 	<fieldset>
 		<label for="fieldiutizjy">Reception Contact</label>
-		<input id="fieldiutizjy" name="cm-f-iutizjy" type="text" />
+		<input id="fieldiutizjy" name="cm-f-iutizjy" type="text" required />
+	</fieldset>
+	<fieldset>
+		<label for="fieldiutiott">Number of Tables at Your Reception</label>
+		<input id="fieldiutiott" name="cm-f-iutiott" type="text" required />
 	</fieldset>
 
 	<hr>
 	<h4><em>Step 4 of 6</em> / Personal Flowers</h4>
 	<fieldset>
 		<label for="fieldiutiyuik">What is the address where we should deliver your personal flowers?</label>
-		<input id="fieldiutiyuik" name="cm-f-iutiyuik" type="text" />
+		<input id="fieldiutiyuik" name="cm-f-iutiyuik" type="text" required />
 	</fieldset>
 	<p>Please list the names of those who will receive personal flowers and how they're related to you (Mother, Brother, Best Friend, etc&hellip;):</p>
 	<fieldset>
 		<label for="fieldiutihuyh">Bridal Bouquets</label>
-		<input id="fieldiutihuyh" name="cm-f-iutihuyh" type="textarea" />
+		<textarea id="fieldiutihuyh" name="cm-f-iutihuyh" placeholder="Mimi, the bride" rows="3" required></textarea>
 	</fieldset>
 	<fieldset>
 		<label for="fieldiutikrtk">Boutonnieres</label>
-		<input id="fieldiutikrtk" name="cm-f-iutikrtk" type="textarea" />
+		<textarea id="fieldiutikrtk" name="cm-f-iutikrtk" placeholder="Jim Marryman, groom" rows="3" required></textarea>
 	</fieldset>
 	<fieldset>
 		<label for="fieldiutikrdd">Corsages</label>
-		<input id="fieldiutikrdd" name="cm-f-iutikrdd" type="textarea" />
+		<textarea id="fieldiutikrdd" name="cm-f-iutikrdd" placeholder="Mabel Doe, mother of the bride" rows="3" required></textarea>
 	</fieldset>
 	<fieldset>
 		<label for="fieldiutikrhk">Hair Flowers</label>
-		<input id="fieldiutikrhk" name="cm-f-iutikrhk" type="textarea" />
+		<textarea id="fieldiutikrhk" name="cm-f-iutikrhk" placeholder="Minnie the flower girl, bride's niece" rows="3" required></textarea>
 	</fieldset>
 	<fieldset>
 		<label for="fieldiutiudky">Ring Bearer(s)</label>
-		<input id="fieldiutiudky" name="cm-f-iutiudky" type="textarea" />
+		<textarea id="fieldiutiudky" name="cm-f-iutiudky" placeholder="Jimmy, groom's nephew" rows="3" required></textarea>
 	</fieldset>
 
 	<hr>
 	<h4><em>Step 5 of 6</em> / Vendors</h4>
 	<fieldset>
 		<label for="fieldiutiuhlh">Caterer</label>
-		<input id="fieldiutiuhlh" name="cm-f-iutiuhlh" type="text" />
+		<input id="fieldiutiuhlh" name="cm-f-iutiuhlh" type="text" required />
 	</fieldset>
 	<fieldset>
 		<label for="fieldiutiuhe">Photographer</label>
-		<input id="fieldiutiuhe" name="cm-f-iutiuhe" type="text" />
+		<input id="fieldiutiuhe" name="cm-f-iutiuhe" type="text" required />
 	</fieldset>
 	<fieldset>
 		<label for="fieldiutiuklr">Will you be taking <em>first look</em> photos?</label>
-		<input type="checkbox" id="fieldiutiuklr" name="cm-fo-iutiuklr" value="8671062">
+		<input type="radio" id="fieldiutiuklr" name="cm-fo-iutiuklr" value="8671062" required>
 		<label class="inlineLabel" for="cm-fo-iutiuklr">Yes, we will</label>
 		<br />
-		<input type="checkbox" id="fieldiutiuklr" name="cm-fo-iutiuklr" value="8675061">
+		<input type="radio" id="fieldiutiuklr" name="cm-fo-iutiuklr" value="8675061" required>
 		<label class="inlineLabel" for="cm-fo-iutiuklr">No, we won't</label>
+		<br />
+		<input type="radio" id="fieldiutiuklr" name="cm-fo-iutiuklr" value="8698588" required>
+		<label class="inlineLabel" for="cm-fo-iutiuklr">I don't know</label>
 	</fieldset>
 
 	<hr>
