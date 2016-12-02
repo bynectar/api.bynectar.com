@@ -341,5 +341,9 @@ module.exports = function () {
 		return JSON.stringify(obj, null, 3);
 	};
 
+	_helpers.galleryAlt = function(title,venue,location) {
+		return title + " | " + venue + " | " + location;
+	};
+
 	return _helpers;
 };
