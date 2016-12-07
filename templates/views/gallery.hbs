@@ -20,14 +20,14 @@
 				<p class="galleryThumbnail__blurb">{{{data.gallery.blurb.body}}}</p>
 			</div>
 			<div class="galleryThumbnail__photo">
-				{{> image image=data.thumbnailPhoto width='2400' height='1800' alt=(galleryAlt data.thumbnailPhoto.title data.gallery.venue.name data.gallery.location)}}
+				{{> image image=data.thumbnailPhoto width='2400' height='1800' alt=(altTag data.thumbnailPhoto.title data.gallery.venue.name data.gallery.location)}}
 			</div>
 		</div>
 
 		<div class="grid" id="galleryGrid">
 			{{#each data.gridPhotos}}
 			<div class="galleryGrid__item">
-				{{> image image=this alt=(galleryAlt this.title ../data.gallery.venue.name ../data.gallery.location)}}
+				{{> image image=this alt=(altTag this.title ../data.gallery.venue.name ../data.gallery.location)}}
 			</div>
 			{{/each}}
 		</div>

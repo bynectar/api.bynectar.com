@@ -18,7 +18,7 @@
 		<!-- Gallery Thumbnail -->
 		<div class="pressThumbnail">
 			<div class="pressThumbnail__photo">
-				{{> imageCustom src=this.photo.secure_url link=this.url title=this.title width=1200 height=800}}
+				{{> imageCustom src=this.photo.secure_url link=this.url title=this.title width=1200 height=800 alt=(altTag this.publication this.title null)}}
 			</div>
 			<div class="pressThumbnail__text">
 				<h4 class="pressThumbnail__publication">{{this.publication}}</h4>

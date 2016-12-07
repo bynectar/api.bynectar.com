@@ -19,7 +19,7 @@
 			<!-- Gallery Thumbnail -->
 			<div class="galleriesThumbnail homeBlock">
 				<div class="galleriesThumbnail__photo">
-					{{> image image=data.gallery.thumbnailPhoto key=data.gallery.key}}
+					{{> image image=data.gallery.thumbnailPhoto key=data.gallery.key alt=(altTag data.gallery.title data.gallery.venue.name data.gallery.location)}}
 				</div>
 				<div class="galleriesThumbnail__text">
 					<h4 class="galleriesThumbnail__location">From our Galleries</h4>
@@ -36,6 +36,7 @@
 				{{> imageCustom
 					title='placeholder image'
 					src='/images/process/2016-10-08_Misty-Centerpiece-1.jpg'
+					alt='Our Process | Nectar Floral Design | Boston-area wedding flowers'
 				}}
 			</div>
 			<div class="homeBlock__text">
