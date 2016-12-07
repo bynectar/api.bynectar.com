@@ -29,7 +29,6 @@ exports = module.exports = function (req, res) {
 
 		q.exec(function (err, result) {
 			locals.data.gallery = result;
-			locals.data.galleryparse = JSON.stringify(result);
 			locals.data.gallery.venue = _.filter( result.vendors, { 'type': 'venue' } )[0];
 		})
 		.then(function(gallery){
