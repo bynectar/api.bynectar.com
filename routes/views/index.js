@@ -1,6 +1,7 @@
 var keystone = require('keystone');
 var ig = require('instagram-node').instagram();
 var https = require('https');
+var _ = require('lodash');
 
 exports = module.exports = function (req, res) {
 
@@ -24,10 +25,11 @@ exports = module.exports = function (req, res) {
 	// Load the current gallery
 	view.on('init', function (next) {
 
-		var q = keystone.list('Gallery').model.findOne().where('state', 'published').sort('-publishedDate');
+		var q = keystone.list('Gallery').model.findOne().where('state', 'published').sort('-publishedDate').populate('vendors');
 
 		q.exec(function (err, result) {
 			locals.data.gallery = result;
+			locals.data.gallery.venue = _.filter( result.vendors, { 'type': 'venue' } )[0];
 		})
 		.then(function(gallery){
 			keystone.list( 'Photo' ).model.findOne().where( { gallery: gallery.id, photoType: 'thumbnail' } ).populate( 'photoCredit' ).exec( function ( err, result ) {

@@ -341,5 +341,19 @@ module.exports = function () {
 		return JSON.stringify(obj, null, 3);
 	};
 
+	_helpers.altTag = function(one,two,three) {
+		var alt = '';
+		if (one){
+			alt += one;
+		}
+		if (two){
+			alt += ' | ' + two;
+		}
+		if (three){
+			alt += ' | ' + three;
+		}
+		return alt;
+	};
+
 	return _helpers;
 };
