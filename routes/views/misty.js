@@ -9,7 +9,7 @@ exports = module.exports = function (req, res) {
 	// item in the header navigation.
 	locals.section = 'misty';
 	// Set appropriate heading type to use appropriate styles
-	locals.headingType = 'light';
+	locals.headingType = 'dark';
 
 	locals.data = {
 		currentUrl: req.originalUrl,

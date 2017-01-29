@@ -9,11 +9,11 @@
 			padding-bottom 0rem
 
 #homeBody
-	padding .25rem
 	box-sizing border-box
 
 	.homeBlock
 		pingPong()
+		margin-top 6rem
 		.homeBlock__text
 			pingPongText()
 		.homeBlock__photo
@@ -31,7 +31,6 @@
 				opacity 1
 		& > li
 			padding 0
-			border .25rem solid white
 			box-sizing border-box
 			transition opacity linear .1s
 			@media (min-width 0)
@@ -52,3 +51,6 @@
 				display block
 				width 100%
 				height auto
+		i.fa
+			font-size 2rem
+			margin-right .5rem

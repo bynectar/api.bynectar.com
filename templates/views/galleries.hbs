@@ -6,7 +6,7 @@
 			<div class="heroText">
 				<p>{{data.tester}}</p>
 				<h1 class="heroText__surTitle">Photo Galleries</h1>
-				<h2 class="heroText__title">Meet Our Couples</h2>
+				<h2 class="heroText__title"><span>Meet Our Couples</span></h2>
 			</div>
 		</div>
 	</section>
@@ -17,17 +17,15 @@
 	{{#if galleries}}
 		{{#each galleries}}
 		<!-- Gallery Thumbnail -->
-		<div class="galleriesThumbnail">
+		<div class="galleriesThumbnail fadeInOnScroll">
 			<div class="galleriesThumbnail__photo">
 				<a href="/galleries/{{key}}" title="{{title}}">
 					{{> image image=this.thumbnailPhoto key=key width=1200 height=800 wide=true}}
 				</a>
 			</div>
 			<div class="galleriesThumbnail__text">
-				<h3 class="galleriesThumbnail__title">{{title}}</h3>
-				<h4 class="galleriesThumbnail__venue">{{venue.name}}</h4>
-				<h4 class="galleriesThumbnail__location">{{location}}</h4>
-				{{!<p class="galleriesThumbnail__blurb">{{{blurb.body\}\}\}</p>}}
+				<h3 class="galleriesThumbnail__title"><span>{{title}}</span></h3>
+				<h4 class="galleriesThumbnail__venue">{{venue.name}} &bull; {{location}}</h4>
 				<a href="/galleries/{{key}}" class="galleriesThumbnail__cta cta">View Gallery</a>
 			</div>
 		</div>

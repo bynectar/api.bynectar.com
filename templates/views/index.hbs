@@ -22,10 +22,12 @@
 					{{> image image=data.gallery.thumbnailPhoto key=data.gallery.key wide=true}}
 				</div>
 				<div class="galleriesThumbnail__text">
-					<h4 class="galleriesThumbnail__location">From our Galleries</h4>
-					<h3 class="galleriesThumbnail__title">{{data.gallery.title}}</h3>
-					{{!<p class="galleriesThumbnail__blurb">{{{blurb.body\}\}\}</p>}}
-					<a href="/galleries/{{data.gallery.key}}" class="galleriesThumbnail__cta cta">View Gallery</a>
+					<div class="textCard textCardParallax">
+						<h4 class="galleriesThumbnail__location">From our Galleries</h4>
+						<h3 class="galleriesThumbnail__title">{{data.gallery.title}}</h3>
+						<h4 class="galleriesThumbnail__venue">{{data.gallery.venue.name}} &bull; {{data.gallery.location}}</h4>
+						<a href="/galleries/{{data.gallery.key}}" class="galleriesThumbnail__cta cta">View Gallery</a>
+					</div>
 				</div>
 			</div>
 		{{/if}}
@@ -40,10 +42,12 @@
 				}}
 			</div>
 			<div class="homeBlock__text">
-				<h4 class="homeBlock__subtitle">Our Process</h4>
-				<h3 class="homeBlock__title">How we do it.</h3>
-				<p class="homeBlock__blurb">Congratulations! You’re getting married and you’re talking to us about your flowers. Our first step is an introductory phone call. We’ll talk about your wedding plans, how the two of you met, how he popped the question. Afterward we’ll send you a questionnaire to get some more detail about your event, but on this call we just want to get to know you better.</p>
-				<a href="/our-process/" class="cta">Find out more</a>
+				<div class="textCard textCardParallax">
+					<h4 class="homeBlock__subtitle">Our Process</h4>
+					<h3 class="homeBlock__title">How we do it.</h3>
+					<p class="homeBlock__blurb">Congratulations! You’re getting married and you’re talking to us about your flowers. Our first step is an introductory phone call. We’ll talk about your wedding plans, how the two of you met, how he popped the question. Afterward we’ll send you a questionnaire to get some more detail about your event, but on this call we just want to get to know you better.</p>
+					<a href="/our-process/" class="cta">Find out more</a>
+				</div>
 			</div>
 		</div>
 
@@ -52,7 +56,7 @@
 			<ul id="nectarInstagram">
 				<li>
 					<h4>On Instagram</h4>
-					<h3>@bynectar</h3>
+					<h3><i class="fa fa-at"></i>bynectar</h3>
 					<a href="http://www.bynectar.com/bynectar" target="_blank" class="cta" title="Nectar on Instagram">Visit Us</a>
 				</li>
 				{{#each data.instagramFeed}}

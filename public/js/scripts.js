@@ -52,14 +52,39 @@ $(document).ready(function(){
 	})
 
 	// Scroll Nav Class
-	$(window).scroll(function(){
+	function stickyNav() {
 		var scroll = $(window).scrollTop();
 		if ( scroll > 0 ){
 			$('html').addClass('scroll');
 		} else {
 			$('html').removeClass('scroll');
 		}
-	});
+	}
+
+	// Fade in on scroll
+	function fadeInOnScroll() {
+		var viewportHeight = $(window).height();
+		var fadeThreshold = viewportHeight * .75
+		var scrollOffset = document.body.scrollTop;
+		$('.fadeInOnScroll').each(function(){
+			var elementOffset = $(this).offset().top;
+			var checkOffset = (elementOffset - scrollOffset) - fadeThreshold
+			if (checkOffset < 0) $(this).addClass('visible');
+		})
+	}
+
+	// Parallax text cards
+	function parallaxTextCards() {
+		var viewportHeight = $(window).height();
+		var viewportAxis = viewportHeight * .5;
+		var scrollOffset = document.body.scrollTop;
+		$('.textCardParallax').each(function(){
+			var elementOffset = $(this).offset().top;
+			var elementHeight = $(this).height();
+			var cardMargin = ((elementOffset + (elementHeight / 2) - (viewportHeight/2)) - scrollOffset)/8;
+			$(this).css({top:`${cardMargin}px`});
+		})
+	}
 
 	// Init Masonry
 	Macy.init({
@@ -72,6 +97,17 @@ $(document).ready(function(){
 			900: 2,
 			640: 1
 		}
+	});
+
+	// On DOM load functions
+	fadeInOnScroll();
+	parallaxTextCards();
+
+	// On scroll functions
+	$(window).scroll(function(){
+		stickyNav();
+		fadeInOnScroll();
+		parallaxTextCards();
 	});
 
 });

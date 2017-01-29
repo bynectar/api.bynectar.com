@@ -3,18 +3,34 @@
 	textHero()
 	aspect(small,1,1)
 	aspect(medium,5,2)
-	aspect(large,3,1)
+	aspect(large,4,1)
 
 #pressBody
 	width 100%
-	padding .25rem
 	box-sizing border-box
+	display flex
+	flex-wrap wrap
+	justify-content center
 
 .pressThumbnail
-	pingPong()
+	flex-shrink 1
+	width 25%
+	margin-bottom 6rem
+	&:nth-child(odd)
+		margin-top -1rem
 	.pressThumbnail__text
 		pingPongText()
-		.pressThumbnail__location
-			color dk-gray
+		.pressThumbnail__title
+			font-size 2rem
 	.pressThumbnail__photo
 		pingPongImage()
+
+@media (min-width: small)
+	.pressThumbnail
+		width percentage(1/1)
+@media (min-width: medium)
+	.pressThumbnail
+		width percentage(1/2)
+@media (min-width: large)
+	.pressThumbnail
+		width percentage(1/3)

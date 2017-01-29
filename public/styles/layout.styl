@@ -15,3 +15,11 @@
 .flexible-image
   width 100%
   height auto
+
+.fadeInOnScroll
+  opacity 0
+  filter blur(25px)
+  transition all ease-out .3s
+  &.visible
+    opacity 1
+    filter blur(0px)

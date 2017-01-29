@@ -3,9 +3,8 @@
 	<section id="galleryHero">
 		<div class="heroBody">
 			<div class="heroText">
-				<h1 class="heroText__title">{{data.gallery.title}}</h1>
-				<h2 class="heroText__surTitle">{{data.gallery.venue.name}}</h2>
-				<h2 class="heroText__surTitle"  id="galleryHero__location">{{data.gallery.location}}</h2>
+				<h1 class="heroText__title"><span>{{data.gallery.title}}</span></h1>
+				<h2 class="heroText__surTitle">{{data.gallery.venue.name}} &bull; {{data.gallery.location}}</h2>
 			</div>
 		</div>
 	</section>
@@ -13,7 +12,7 @@
 	<section id="galleryBody">
 
 		<!-- Gallery Thumbnail -->
-		<div class="galleryThumbnail">
+		<div class="galleryThumbnail fadeInOnScroll">
 			<div class="galleryThumbnail__text">
 				<h4 class="galleryThumbnail__surTitle">{{data.gallery.blurb.subtitle}}</h4>
 				<h3 class="galleryThumbnail__title">{{data.gallery.blurb.title}}</h3>
@@ -26,7 +25,7 @@
 
 		<div class="grid" id="galleryGrid">
 			{{#each data.gridPhotos}}
-			<div class="galleryGrid__item">
+			<div class="galleryGrid__item fadeInOnScroll">
 				{{> image image=this}}
 			</div>
 			{{/each}}

@@ -15,6 +15,10 @@
 		background-size 105px 140px
 		background-position 0 0
 		background-repeat no-repeat
+		transition background-size linear .1s, height linear .1s, width linear .1s
+
+	#header__nav
+		transition all linear .1s
 
 body.heading-dark
 	#header
@@ -27,10 +31,19 @@ body.heading-dark
 
 html.scroll #header
 	background rgba(255,255,255,.9)
+	height 6rem
+	#headerLogo
+		top 10px
+		left 10px
+		width 78px
+		height 52px
+		background-size 78px 105px
+		z-index 10
 	#header__navButton
 		color dk-gray
 	#header__nav
 		color dk-gray
+		padding-top 18px
 		#nav__pipe
 			color dk-gray
 
