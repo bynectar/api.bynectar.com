@@ -3,13 +3,13 @@
 
 	{{! Link image if a key is provided }}
 	{{#if key}}
-		<a href="/galleries/{{key}}">
+		<a href="/galleries/{{key}}" title="{{alt}}">
 	{{/if}}
 
 	{{#if width}}
-		<img class="thumbImage" src="{{cloudinaryUrl image.image width=width height=height crop='fit' quality='50'}}" data-slide="{{image.image.secure_url}}">
+		<img class="thumbImage" src="{{cloudinaryUrl image.image width=width height=height crop='fit' quality='50'}}" data-slide="{{image.image.secure_url}}" alt="{{alt}}">
 	{{else}}
-		<img class="thumbImage" src="{{cloudinaryUrl image.image width='900' height='900' crop='fit' quality='50'}}" data-slide="{{image.image.secure_url}}">
+		<img class="thumbImage" src="{{cloudinaryUrl image.image width='900' height='900' crop='fit' quality='50'}}" data-slide="{{image.image.secure_url}}" alt="{{alt}}">
 	{{/if}}
 
 	{{! Link image if a key is provided }}

@@ -2,11 +2,11 @@
 <div class="thumbWrapper">
 
 	{{#if link}}
-		<a href="{{link}}">
+		<a href="{{link}}" title="{{alt}}">
 	{{/if}}
 
 	{{! Use provided URL }}
-	<img class="thumbImage" src="{{src}}">
+	<img class="thumbImage" src="{{src}}" alt="{{alt}}">
 
 	{{#if link}}
 		</a>
