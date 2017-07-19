@@ -25,6 +25,7 @@
     "load-grunt-tasks": "^0.4.0",
     "lodash": "^4.13.1",
     "moment": "^2.10.6",
+    "node-gyp": "^3.6.2",
     "open": "0.0.5",
     "stylus": "^0.53.0",
     "time-grunt": "^0.3.1",
