@@ -2098,11 +2098,7 @@ domain-browser@~1.1.0:
   version "1.1.7"
   resolved "https://registry.yarnpkg.com/domain-browser/-/domain-browser-1.1.7.tgz#867aa4b093faa05f1de08c06f4d7b21fdf8698bc"
 
-domelementtype@1:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/domelementtype/-/domelementtype-1.3.0.tgz#b17aed82e8ab59e52dd9c19b1756e0fc187204c2"
-
-domelementtype@~1.1.1:
+domelementtype@1, domelementtype@~1.1.1:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/domelementtype/-/domelementtype-1.1.3.tgz#bd28773e2642881aec51544924299c5cd822185b"
 
@@ -4305,7 +4301,7 @@ mute-stream@0.0.5:
   version "0.0.5"
   resolved "https://registry.yarnpkg.com/mute-stream/-/mute-stream-0.0.5.tgz#8fbfabb0a98a253d3184331f9e8deb7372fac6c0"
 
-nan@^2.3.0, nan@^2.3.2, nan@^2.3.3:
+nan@^2.3.0, nan@^2.3.2, nan@^2.3.3, nan@^2.5.1:
   version "2.6.2"
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.6.2.tgz#e4ff34e6c95fdfb5aecc08de6596f43605a7db45"
 
@@ -4381,7 +4377,27 @@ node-inspector@^0.12.8:
     ws "^1.0.1"
     yargs "^3.9.0"
 
-node-pre-gyp@^0.6.36, node-pre-gyp@^0.6.5:
+node-inspector@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/node-inspector/-/node-inspector-1.1.1.tgz#e7851eb973f380543c058db564a9812055eac640"
+  dependencies:
+    async "~0.9"
+    biased-opener "~0.2.2"
+    debug "^2.2.0"
+    express "^4.12.3"
+    glob "^5.0.5"
+    path-is-absolute "^1.0.0"
+    rc "^1.0.1"
+    semver "^4.3.4"
+    serve-favicon "^2.1.1"
+    strong-data-uri "^1.0.0"
+    v8-debug "~1.0.0"
+    v8-profiler "~5.7.0"
+    which "^1.1.1"
+    ws "^1.0.1"
+    yargs "^3.9.0"
+
+node-pre-gyp@^0.6.34, node-pre-gyp@^0.6.36, node-pre-gyp@^0.6.5:
   version "0.6.36"
   resolved "https://registry.yarnpkg.com/node-pre-gyp/-/node-pre-gyp-0.6.36.tgz#db604112cb74e0d477554e9b505b17abddfab786"
   dependencies:
@@ -6122,12 +6138,26 @@ v8-debug@~0.7.1:
     nan "^2.3.2"
     node-pre-gyp "^0.6.5"
 
+v8-debug@~1.0.0:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/v8-debug/-/v8-debug-1.0.1.tgz#6ae1c6dae4477bb3ced79b523e4d160c1d8667fe"
+  dependencies:
+    nan "^2.3.2"
+    node-pre-gyp "^0.6.5"
+
 v8-profiler@~5.6.0:
   version "5.6.5"
   resolved "https://registry.yarnpkg.com/v8-profiler/-/v8-profiler-5.6.5.tgz#8b22e6ff3b76a1c75b1d53fd18d58e3f0a46f5be"
   dependencies:
     nan "^2.3.2"
     node-pre-gyp "^0.6.5"
+
+v8-profiler@~5.7.0:
+  version "5.7.0"
+  resolved "https://registry.yarnpkg.com/v8-profiler/-/v8-profiler-5.7.0.tgz#e8381cbebb5b5fd0ca8d2b09f6a0181a158db34d"
+  dependencies:
+    nan "^2.5.1"
+    node-pre-gyp "^0.6.34"
 
 validate-npm-package-license@^3.0.1:
   version "3.0.1"
