@@ -1,3 +1,4 @@
+<script src="/js/parsley.min.js" type="text/javascript"></script>
 <form action="https://hooks.zapier.com/hooks/catch/2393795/5rcrdy/" method="post" id="subForm">
 	<fieldset>
 		<label for="fieldName">Name*</label>
@@ -116,7 +117,7 @@
 	</fieldset>
 	<fieldset>
 		<label for="fieldiithtrty">Tell us more about your wedding.*</label>
-		<textarea id="fieldiithtrty" name="tell-us-more"></textarea>
+		<textarea id="fieldiithtrty" name="tell-us-more" required></textarea>
  	</fieldset>
 	<fieldset>
 		<label>Would you like to get mail from Nectar about flowers, gardening, weddings and workshops?</label>
@@ -132,16 +133,16 @@
 	<h4>Thanks for filling out our contact form!<h4>
 </div>
 <script>
-	$(function(){
-	  $('form#subForm').submit(function(){
-	    $.post($(this).attr('action'), $(this).serialize(), function(json) {
-	      console.log(json);
-	    }, 'json');
-			$(this).fadeOut('fast', function(){
-				$('#successMessage').fadeIn();
-				$(window).scrollTop($('#successMessage').offset().top - 100);
-			});
-	    return false;
-	  });
+	var subForm = $('#subForm');
+	subForm.parsley()
+	Parsley.on('form:submit', function() {
+		$.post(subForm.attr('action'), subForm.serialize(), function(json) {
+      console.log(json);
+    }, 'json');
+		subForm.fadeOut('fast', function(){
+			$('#successMessage').fadeIn();
+			$(window).scrollTop($('#successMessage').offset().top - 100);
+		});
+	  return false;
 	});
 </script>
