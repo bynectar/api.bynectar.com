@@ -28,7 +28,7 @@
     "moment": "^2.10.6",
     "node-gyp": "^3.6.2",
     "open": "0.0.5",
-    "stylus": "^0.53.0",
+    "stylus": "^0.54.5",
     "time-grunt": "^0.3.1",
     "underscore": "^1.8.3"
   },
